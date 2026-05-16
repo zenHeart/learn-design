@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bad-bg { fill: #ffebee; }
+      .good-bg { fill: #e8f5e9; }
+      .bad-text { fill: #c62828; font-family: Arial; font-weight: bold; }
+      .good-text { fill: #2e7d32; font-family: Arial; font-weight: bold; }
+      .label { font-family: Arial; font-size: 14px; }
+      .field { fill: #f5f5f5; stroke: #bdbdbd; stroke-width: 1; rx: 4; }
+      .field-label { font-size: 11px; fill: #757575; }
+      .arrow { fill: #2196f3; }
+      .x-icon { fill: #f44336; }
+      .check-icon { fill: #4caf50; }
+    </style>
+  </defs>
+  
+  <!-- BAD Example -->
+  <rect x="10" y="10" width="380" height="380" class="bad-bg" rx="10"/>
+  <text x="200" y="45" text-anchor="middle" class="bad-text" font-size="18">❌ BAD - 高认知负荷</text>
+  
+  <!-- Bad form - all mixed up -->
+  <g transform="translate(30, 70)">
+    <rect x="0" y="0" width="340" height="25" class="field"/>
+    <text x="10" y="17" class="field-label">姓名</text>
+    
+    <rect x="0" y="35" width="340" height="25" class="field"/>
+    <text x="10" y="52" class="field-label">邮箱</text>
+    
+    <rect x="0" y="70" width="340" height="25" class="field"/>
+    <text x="10" y="87" class="field-label">手机号</text>
+    
+    <rect x="0" y="105" width="340" height="25" class="field"/>
+    <text x="10" y="122" class="field-label">收货地址</text>
+    
+    <rect x="0" y="140" width="340" height="25" class="field"/>
+    <text x="10" y="157" class="field-label">邮编</text>
+    
+    <rect x="0" y="175" width="340" height="25" class="field"/>
+    <text x="10" y="192" class="field-label">支付方式</text>
+    
+    <rect x="0" y="210" width="340" height="25" class="field"/>
+    <text x="10" y="227" class="field-label">发票类型</text>
+    
+    <rect x="0" y="245" width="340" height="25" class="field"/>
+    <text x="10" y="262" class="field-label">备注</text>
+    
+    <text x="170" y="320" text-anchor="middle" fill="#c62828" font-size="13">20+ 字段无分组，难以理解</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 400 200 L 430 200 L 430 200 L 450 180" stroke="#2196f3" stroke-width="3" fill="none"/>
+  <polygon points="450,180 450,220 430,200" fill="#2196f3"/>
+  
+  <!-- GOOD Example -->
+  <rect x="410" y="10" width="380" height="380" class="good-bg" rx="10"/>
+  <text x="600" y="45" text-anchor="middle" class="good-text" font-size="18">✅ GOOD - 低认知负荷</text>
+  
+  <!-- Good form - grouped -->
+  <g transform="translate(430, 70)">
+    <!-- Group 1: Personal Info -->
+    <rect x="0" y="0" width="340" height="110" fill="white" stroke="#4caf50" stroke-width="2" rx="8"/>
+    <text x="10" y="25" fill="#4caf50" font-weight="bold" font-size="13">👤 个人信息</text>
+    <rect x="10" y="40" width="150" height="25" class="field"/>
+    <text x="18" y="57" class="field-label">姓名</text>
+    <rect x="170" y="40" width="160" height="25" class="field"/>
+    <text x="178" y="57" class="field-label">手机号</text>
+    <rect x="10" y="75" width="320" height="25" class="field"/>
+    <text x="18" y="92" class="field-label">邮箱</text>
+    
+    <!-- Group 2: Shipping -->
+    <rect x="0" y="125" width="340" height="80" fill="white" stroke="#4caf50" stroke-width="2" rx="8"/>
+    <text x="10" y="150" fill="#4caf50" font-weight="bold" font-size="13">📦 收货信息</text>
+    <rect x="10" y="165" width="240" height="25" class="field"/>
+    <text x="18" y="182" class="field-label">收货地址</text>
+    <rect x="260" y="165" width="70" height="25" class="field"/>
+    <text x="268" y="182" class="field-label">邮编</text>
+    
+    <!-- Group 3: Payment -->
+    <rect x="0" y="220" width="340" height="70" fill="white" stroke="#4caf50" stroke-width="2" rx="8"/>
+    <text x="10" y="245" fill="#4caf50" font-weight="bold" font-size="13">💳 支付选项</text>
+    <rect x="10" y="260" width="150" height="25" class="field"/>
+    <text x="18" y="277" class="field-label">支付方式</text>
+    
+    <text x="170" y="320" text-anchor="middle" fill="#2e7d32" font-size="13">分块清晰，一目了然</text>
+  </g>
+</svg>
