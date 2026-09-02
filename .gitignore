@@ -5,3 +5,7 @@ todo.md
 .claude/
 docs/.vitepress/dist
 docs/.vitepress/cache
+.playwright-mcp/
+*-home-*.png
+v[0-9]-*.png
+d1-*.png
