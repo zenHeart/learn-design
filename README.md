@@ -118,12 +118,14 @@
 按优先级：
 
 1. **lawsofux.md 增量同步**：站点现有 30 词条（约 24 定律 + 6 概念条目）vs 本站 26 条快照，补齐差额并核对分类。
-2. **CRAP 四原则小篇**：principles 层，与 lawsofux 的视觉类法则互链（来源 books 层提炼）。
-3. **Windows 桌面设计知识正式入库**：Windows 桌面研究笔记（6 篇，基于 Microsoft Learn，现存于本地提取物未入库）+ `windows-app-design` skill 迁入 languages/ 与 patterns/，消除外部依赖。
-4. **格式塔原理专篇**：principles 层，表述采用"核心 5 项 + 现代扩展 3–5 项"，勿写死条目数。
-5. **AI 对话/Agent 产品模式细化**：patterns 层最活跃扩展区（微软 HAX 18 条 + Google PAIR 23 模式的深度拆解与案例化）。
-6. **书籍缺口补验**：《点石成金》《用户体验要素》《写给大家看的设计书》在微信读书的电子书在架情况复核；有在架则补热门划线证据。
-7. **状态复核**：Netflix Medium 出版物是否彻底停更；SLDS 2 迁移进度；NN/g 3-click 原文链接人工核验。
+2. **Windows 桌面设计知识正式入库**：Windows 桌面研究笔记（6 篇，基于 Microsoft Learn，现存于本地提取物未入库）+ `windows-app-design` skill 迁入 languages/ 与 patterns/，消除外部依赖。
+3. **AI 对话/Agent 产品模式细化**：patterns 层最活跃扩展区（微软 HAX 18 条 + Google PAIR 23 模式的深度拆解与案例化）。
+4. **CRAP 四原则小篇**：principles 层，与 lawsofux 的视觉类法则互链（来源 books 层提炼）。
+5. **格式塔原理专篇**：principles 层，表述采用"核心 5 项 + 现代扩展 3–5 项"，勿写死条目数。
+6. **法则引用粒度决策**（ux-architect 提案遗留权衡）：当前为"卡片索引 + 锚点长文"（方案 B，利于横向比较与一次通读）；若出现按单条法则高频引用的真实需求，再升级为"每法一页 + 英文 slug"（方案 A），用 createContentLoader 从 frontmatter 生成卡片墙，避免一次性迁移 26 个文件。
+7. **横向互链加密**：AI 产品矩阵 → 相关法则 → 设计语言之间补双向"参见"链接；hub 类 living data 与判断依据层保持分域。
+8. **书籍缺口补验**：《点石成金》《用户体验要素》《写给大家看的设计书》在微信读书的电子书在架情况复核；有在架则补热门划线证据。
+9. **状态复核**：Netflix Medium 出版物是否彻底停更；NN/g 3-click 原文链接人工核验。（SLDS 2 已裁决：Winter '26 正式 GA）
 
 ## 本次建站调研档案（2026-09-02）
 
