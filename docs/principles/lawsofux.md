@@ -1,8 +1,15 @@
+---
+title: UX 设计法则（26 条）
+description: lawsofux.com 全量中文沉淀：26 条 UX 心理学法则按六大类组织，每条含 BAD/GOOD 对比、SVG 插图与设计应用；另附分类速查表。
+---
+
 # UX 设计法则
 
 > 来源：[lawsofux.com](https://lawsofux.com/) 作者：Jon Yablonski
 > 
 > 这是一个收集了用户体验设计最佳实践的网站，帮助设计师构建更易用的用户界面。
+
+<LawIndex />
 
 ---
 

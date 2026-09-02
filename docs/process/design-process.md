@@ -1,3 +1,8 @@
+---
+title: 设计工作流与流程体系
+description: 双钻模型、Systemic Design、Design Sprint、IBM EDT、Lean UX 与设计系统工作流对照；跨体系 7 条共性原则；DTCG token 标准澄清。
+---
+
 # 设计工作流与流程体系
 
 > 目标：回答"一个设计从想法到落地经过哪些阶段、每个阶段有什么产物、不同体系如何取舍"。流程是审视产品的提问顺序，也是 agent 做设计评审时的方法论骨架。

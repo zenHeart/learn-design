@@ -4,13 +4,15 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Learn Design',
-  description: '体系化设计认知知识库：法则、启发式、流程、设计语言、产品模式与工具地图',
+  description: '体系化设计认知知识库：法则、启发式、流程、设计语言、产品模式与三类 hub 地图',
   srcExclude: ['_draft/**'],
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   themeConfig: {
     siteTitle: 'Learn Design',
     nav: [
       { text: '知识地图', link: '/' },
+      { text: '法则', link: '/principles/lawsofux' },
+      { text: 'Hub', link: '/resources/hubs-designers' },
       { text: 'GitHub', link: 'https://github.com/zenHeart/learn-design' }
     ],
     sidebar: [
@@ -48,9 +50,14 @@ export default defineConfig({
         items: [{ text: '产品类型约束矩阵', link: '/patterns/product-patterns' }]
       },
       {
-        text: '⑥ 持续追踪',
+        text: '⑥ 持续追踪 · Hubs',
         collapsed: false,
-        items: [{ text: '工具版图与 Hub 地图', link: '/resources/hubs-tools' }]
+        items: [
+          { text: '设计师 Hub', link: '/resources/hubs-designers' },
+          { text: '灵感资源 Hub', link: '/resources/hubs-inspiration' },
+          { text: '学习索引 Hub', link: '/resources/hubs-learning' },
+          { text: '工具 Hub', link: '/resources/hubs-tools' }
+        ]
       }
     ],
     outline: [2, 3],

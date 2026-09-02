@@ -1,3 +1,8 @@
+---
+title: 可用性启发式与无障碍基线
+description: Nielsen 十大可用性启发式走查问句 + WCAG 2.2 关键数字（对比度 4.5:1、目标 24×24px、AA 基线），设计评审的两套硬框架。
+---
+
 # 可用性启发式与无障碍基线
 
 > 与 [lawsofux.md](lawsofux.md) 互补：lawsofux 是心理学视角的法则集合，本文是「评审 checklist 视角」的两套硬性框架——Nielsen 十启发式（专家走查依据）与 WCAG 关键数字（合规底线）。

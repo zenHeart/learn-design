@@ -1,0 +1,472 @@
+/* ============================================================
+   Learn Design 设计系统
+   方向：印刷档案 × 瑞士网格 × 编辑排版
+   签名元素：藏品编号系统（Space Grotesk tabular）+ 朱砂批注红
+   纪律：层级靠字阶与 1px 线，不靠阴影；圆角 ≤2px；动效只动
+        transform/opacity；尊重 prefers-reduced-motion
+   ============================================================ */
+
+:root {
+  /* —— 色：纸面档案（明） —— */
+  --ld-bg: #faf9f6;
+  --ld-bg-soft: #f3f1ec;
+  --ld-text: #1a1c1e;
+  --ld-text-2: #52565c;
+  --ld-text-3: #8a8d93;
+  --ld-accent: #c8401e;        /* 朱砂：批注、编号、强调 */
+  --ld-accent-soft: rgba(200, 64, 30, 0.08);
+  --ld-line: rgba(26, 28, 30, 0.12);
+  --ld-line-strong: rgba(26, 28, 30, 0.55);
+  --ld-ok: #2e7d4f;
+  --ld-warn: #b25e09;
+  --ld-bad: #c03028;
+
+  /* —— 字 —— */
+  --ld-font-display: "Space Grotesk", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ld-font-serif: "Source Han Serif SC", "Noto Serif SC", "STSong", "SimSun", serif;
+  --ld-font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+
+  /* —— 动效：5 duration + 3 easing（Material/Fluent 收敛版） —— */
+  --ld-d-fast: 100ms;
+  --ld-d-base: 200ms;
+  --ld-d-slow: 300ms;
+  --ld-d-reveal: 450ms;
+  --ld-e-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ld-e-enter: cubic-bezier(0, 0, 0, 1);
+  --ld-e-exit: cubic-bezier(0.3, 0, 1, 1);
+}
+
+.dark {
+  --ld-bg: #14161a;
+  --ld-bg-soft: #1d2026;
+  --ld-text: #e8e6e1;
+  --ld-text-2: #a6aab2;
+  --ld-text-3: #6f747d;
+  --ld-accent: #e8683f;
+  --ld-accent-soft: rgba(232, 104, 63, 0.12);
+  --ld-line: rgba(232, 230, 225, 0.14);
+  --ld-line-strong: rgba(232, 230, 225, 0.6);
+  --ld-ok: #5bae7e;
+  --ld-warn: #e09a4b;
+  --ld-bad: #e0655e;
+}
+
+/* —— VitePress 变量重映射：角色化，不散落魔法值 —— */
+:root {
+  --vp-c-bg: var(--ld-bg);
+  --vp-c-bg-alt: var(--ld-bg-soft);
+  --vp-c-bg-soft: var(--ld-bg-soft);
+  --vp-c-text-1: var(--ld-text);
+  --vp-c-text-2: var(--ld-text-2);
+  --vp-c-text-3: var(--ld-text-3);
+  --vp-c-brand-1: var(--ld-accent);
+  --vp-c-brand-2: var(--ld-accent);
+  --vp-c-brand-3: var(--ld-accent);
+  --vp-c-brand-soft: var(--ld-accent-soft);
+  --vp-c-divider: var(--ld-line);
+  --vp-c-gutter: var(--ld-line);
+  --vp-c-border: var(--ld-line);
+  --vp-font-family-base: var(--ld-font-body);
+  --vp-font-family-mono: var(--ld-font-mono);
+  --vp-nav-bg-color: var(--ld-bg);
+  --vp-sidebar-bg-color: var(--ld-bg);
+}
+:root {
+  --ld-font-body: -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
+/* —— 中文排版（W3C clreq）：行高 1.75，正文行长约束 —— */
+body {
+  font-family: var(--ld-font-body);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.vp-doc p {
+  line-height: 1.8;
+  max-width: 42em;
+}
+.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4 {
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 1.35;
+}
+
+/* —— 藏品编号：全站识别符 —— */
+.ld-specimen {
+  font-family: var(--ld-font-display);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--ld-accent);
+  font-size: 0.82em;
+  text-transform: uppercase;
+}
+.ld-eyebrow {
+  font-family: var(--ld-font-display);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ld-text-3);
+}
+
+/* —— 正文链接：朱砂下划线生长 —— */
+.vp-doc :not(a) > a:not(.header-anchor) {
+  color: var(--ld-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ld-line-strong);
+  transition: color var(--ld-d-fast) var(--ld-e-standard),
+    border-color var(--ld-d-fast) var(--ld-e-standard);
+}
+.vp-doc :not(a) > a:not(.header-anchor):hover {
+  color: var(--ld-accent);
+  border-bottom-color: var(--ld-accent);
+}
+
+/* —— 标题：编号眉标 + 分隔线档案化 —— */
+.vp-doc h2 {
+  padding-top: 32px;
+  margin-top: 48px;
+  border-top: 1px solid var(--ld-line);
+  font-size: 24px;
+}
+.vp-doc h1 {
+  font-size: 32px;
+}
+.vp-doc h1 + blockquote,
+.vp-doc h1 + p {
+  margin-top: 16px;
+}
+
+/* —— 引用块：朱砂批注线（替换默认底色块） —— */
+.vp-doc blockquote {
+  margin: 16px 0;
+  padding: 4px 0 4px 16px;
+  border-left: 3px solid var(--ld-accent);
+  background: transparent;
+  color: var(--ld-text-2);
+}
+.vp-doc blockquote p {
+  max-width: none;
+}
+
+/* —— 表格：印刷参考手册式（无竖线、横线分隔、表头字距） —— */
+.vp-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--ld-line);
+  font-size: 14px;
+  display: table;
+}
+.vp-doc table th {
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  color: var(--ld-text-2);
+  background: var(--ld-bg-soft);
+  border-bottom: 1px solid var(--ld-line-strong);
+}
+.vp-doc table td, .vp-doc table th {
+  padding: 10px 14px;
+  border: none;
+  border-bottom: 1px solid var(--ld-line);
+  background: transparent;
+}
+.vp-doc table tr:nth-child(2n) td {
+  background: transparent;
+}
+.vp-doc table tr:last-child td {
+  border-bottom: none;
+}
+/* 宽表容器可横向滚动（表格地狱防线） */
+.vp-doc div[class*="vp-doc"] table,
+.vp-doc .ld-table-scroll {
+  overflow-x: auto;
+}
+
+/* —— 代码块：档案纸边框化，去默认圆角紫调 —— */
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--ld-line);
+  border-radius: 0;
+  background: var(--ld-bg-soft);
+}
+
+/* —— 侧栏与导航：细线秩序 —— */
+.VPNavBar {
+  border-bottom: 1px solid var(--ld-line);
+}
+.VPNavBar .divider {
+  display: none;
+}
+.VPNavBar .title .VPImage {
+  margin-right: 10px;
+}
+.VPSidebar {
+  border-right: 1px solid var(--ld-line);
+}
+.VPSidebarItem.level-1 .text {
+  font-size: 14px;
+}
+.VPSidebar .group .items {
+  border-left: 1px solid var(--ld-line);
+}
+.VPSidebarItem.level-2.is-active > .item > .text {
+  color: var(--ld-accent);
+}
+
+/* —— 首页 Hero：排版宣言 —— */
+.ld-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ld-line);
+  background:
+    linear-gradient(var(--ld-line) 1px, transparent 1px) 0 0 / 100% 96px,
+    linear-gradient(90deg, var(--ld-line) 1px, transparent 1px) 0 0 / 96px 100%,
+    var(--ld-bg);
+  padding: clamp(64px, 10vh, 104px) 24px 56px;
+}
+.ld-hero-inner {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.ld-hero-manifest {
+  font-family: var(--ld-font-serif);
+  font-weight: 900;
+  font-size: clamp(40px, 7vw, 84px);
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  margin: 20px 0 0;
+  max-width: 18em;
+}
+.ld-hero-manifest em {
+  font-style: normal;
+  color: var(--ld-accent);
+}
+.ld-hero-sub {
+  margin-top: 24px;
+  max-width: 40em;
+  color: var(--ld-text-2);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.ld-hero-vert {
+  position: absolute;
+  right: 40px;
+  top: clamp(64px, 10vh, 104px);
+  writing-mode: vertical-rl;
+  font-family: var(--ld-font-serif);
+  font-size: 13px;
+  letter-spacing: 0.5em;
+  color: var(--ld-text-3);
+  user-select: none;
+}
+.ld-hero-stamp {
+  position: absolute;
+  right: 40px;
+  bottom: 48px;
+  border: 1px solid var(--ld-line-strong);
+  padding: 10px 14px;
+  font-family: var(--ld-font-display);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ld-text-2);
+  line-height: 1.7;
+  user-select: none;
+}
+.ld-hero-stamp strong {
+  display: block;
+  color: var(--ld-accent);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+@media (max-width: 959px) {
+  .ld-hero-vert { display: none; }
+  .ld-hero-stamp { display: none; }
+}
+
+/* —— 编号索引条（六层知识地图） —— */
+.ld-layers {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 56px 24px 24px;
+}
+.ld-layer-row {
+  display: grid;
+  grid-template-columns: 112px 1fr auto;
+  gap: 20px;
+  align-items: baseline;
+  padding: 22px 8px;
+  border-top: 1px solid var(--ld-line);
+  text-decoration: none;
+  transition: background var(--ld-d-fast) var(--ld-e-standard);
+}
+.ld-layer-row:last-of-type {
+  border-bottom: 1px solid var(--ld-line);
+}
+.ld-layer-row:hover {
+  background: var(--ld-accent-soft);
+}
+.ld-layer-num {
+  font-family: var(--ld-font-display);
+  font-variant-numeric: tabular-nums;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ld-text);
+  transition: color var(--ld-d-fast) var(--ld-e-standard);
+}
+.ld-layer-row:hover .ld-layer-num {
+  color: var(--ld-accent);
+}
+.ld-layer-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ld-text);
+}
+.ld-layer-desc {
+  margin-top: 4px;
+  color: var(--ld-text-2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.ld-layer-links {
+  display: flex;
+  gap: 14px;
+  white-space: nowrap;
+}
+.ld-layer-links a {
+  font-size: 13px;
+  color: var(--ld-text-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ld-line-strong);
+  transition: color var(--ld-d-fast) var(--ld-e-standard),
+    border-color var(--ld-d-fast) var(--ld-e-standard);
+}
+.ld-layer-links a:hover {
+  color: var(--ld-accent);
+  border-color: var(--ld-accent);
+}
+@media (max-width: 767px) {
+  .ld-layer-row {
+    grid-template-columns: 56px 1fr;
+  }
+  .ld-layer-num { font-size: 28px; }
+  .ld-layer-links { grid-column: 2; flex-wrap: wrap; white-space: normal; }
+}
+
+/* —— 计数条（component.gallery 式） —— */
+.ld-stats {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 8px 24px 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 48px;
+}
+.ld-stat {
+  font-family: var(--ld-font-display);
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--ld-text-2);
+}
+.ld-stat strong {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ld-accent);
+  margin-right: 6px;
+}
+
+/* —— 法则卡片索引 —— */
+.ld-law-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0;
+  border-left: 1px solid var(--ld-line);
+  border-top: 1px solid var(--ld-line);
+  margin: 24px 0 32px;
+}
+.ld-law-card {
+  border-right: 1px solid var(--ld-line);
+  border-bottom: 1px solid var(--ld-line);
+  padding: 16px 16px 14px;
+  text-decoration: none;
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: background var(--ld-d-fast) var(--ld-e-standard);
+}
+.ld-law-card:hover {
+  background: var(--ld-accent-soft);
+}
+.ld-law-card .ld-specimen {
+  font-size: 12px;
+}
+.ld-law-card strong {
+  font-size: 15px;
+  color: var(--ld-text);
+  line-height: 1.4;
+}
+.ld-law-card span {
+  font-size: 12.5px;
+  color: var(--ld-text-2);
+  line-height: 1.6;
+}
+
+/* —— chip 标签：边框式 —— */
+.ld-chip {
+  display: inline-block;
+  padding: 2px 10px;
+  border: 1px solid var(--ld-line-strong);
+  border-radius: 2px;
+  font-size: 12px;
+  color: var(--ld-text-2);
+  letter-spacing: 0.02em;
+}
+
+/* —— BAD/GOOD 语义角标 —— */
+.ld-mark-bad, .ld-mark-good {
+  display: inline-block;
+  padding: 1px 8px;
+  font-family: var(--ld-font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  border: 1px solid currentColor;
+}
+.ld-mark-bad { color: var(--ld-bad); }
+.ld-mark-good { color: var(--ld-ok); }
+
+/* —— 滚动 reveal：渐进增强，不支持则直接显示 —— */
+@supports (animation-timeline: view()) {
+  .ld-reveal {
+    animation: ld-reveal-in both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+  @keyframes ld-reveal-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* —— 页面级滚动条与选区：朱砂 —— */
+::selection {
+  background: var(--ld-accent);
+  color: var(--ld-bg);
+}
+
+/* —— 性能与无障碍红线 —— */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .ld-reveal { animation: none !important; opacity: 1 !important; transform: none !important; }
+}

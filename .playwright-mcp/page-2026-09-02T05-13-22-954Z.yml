@@ -1,0 +1,169 @@
+- generic [ref=f3e3]:
+  - link "Skip to content" [ref=f3e4] [cursor=pointer]:
+    - /url: "#VPContent"
+  - banner:
+    - generic:
+      - generic:
+        - generic:
+          - link "Learn Design" [ref=f3e6] [cursor=pointer]:
+            - /url: /
+          - generic [ref=f3e8]:
+            - button "Search" [ref=f3e11] [cursor=pointer]:
+              - generic [ref=f3e15]:
+                - generic [ref=f3e16]: Ctrl
+                - generic [ref=f3e17]: K
+            - navigation "Main Navigation" [ref=f3e18]:
+              - link "知识地图" [ref=f3e20] [cursor=pointer]:
+                - /url: /
+              - link "法则" [ref=f3e22] [cursor=pointer]:
+                - /url: /principles/lawsofux.html
+              - link "Hub" [ref=f3e24] [cursor=pointer]:
+                - /url: /resources/hubs-designers.html
+              - link "GitHub" [ref=f3e26] [cursor=pointer]:
+                - /url: https://github.com/zenHeart/learn-design
+            - button "extra navigation" [ref=f3e29] [cursor=pointer]
+  - generic [ref=f3e34]:
+    - generic [ref=f3e35]:
+      - paragraph [ref=f3e36]: Learn Design · 设计判断层知识库
+      - generic [ref=f3e37]:
+        - heading [level=1] [ref=f3e38]:
+          - text: 设计是
+          - emphasis [ref=f3e39]: 判断
+          - text: ，不是装饰。
+        - paragraph [ref=f3e40]:
+          - text: 这里不做权威规范的搬运工——只沉淀判断层：跨信源综合的共性、可执行的硬数字、 已验证的信源地图，以及
+          - strong [ref=f3e41]: 什么已被证伪
+          - text: 。 每条知识都为三类场景服务：审视现有设计、按风格重构、以专业设计师视角提问。
+      - generic [ref=f3e42]: 设计判断 · 判断设计
+    - navigation "知识地图" [ref=f3e43]:
+      - paragraph [ref=f3e44]: 知识地图 · Knowledge Map
+      - link "01 认知入口 经典设计书籍的跨书共性 → 四层认知模型；术语、单位与印刷基础。 书籍共性 术语" [ref=f3e45] [cursor=pointer]:
+        - /url: /books/design-books
+        - generic [ref=f3e46]: "01"
+        - generic [ref=f3e47]:
+          - text: 认知入口
+          - generic [ref=f3e48]: 经典设计书籍的跨书共性 → 四层认知模型；术语、单位与印刷基础。
+        - generic [ref=f3e49]:
+          - link "书籍共性" [ref=f3e50]:
+            - /url: /books/design-books
+          - link "术语" [ref=f3e51]:
+            - /url: /foundations/term
+      - link "02判断依据 UX 心理学法则 26 条、Nielsen 十启发式、WCAG 2.2 无障碍硬数字。 UX 法则 启发式与 WCAG" [ref=f3e52] [cursor=pointer]:
+        - /url: /principles/lawsofux
+        - text: "02"
+        - generic [ref=f3e53]:
+          - text: 判断依据
+          - generic [ref=f3e54]: UX 心理学法则 26 条、Nielsen 十启发式、WCAG 2.2 无障碍硬数字。
+        - generic [ref=f3e55]:
+          - link "UX 法则" [ref=f3e56]:
+            - /url: /principles/lawsofux
+          - link "启发式与 WCAG" [ref=f3e57]:
+            - /url: /principles/heuristics-wcag
+      - link "03方法流程 双钻模型、Design Sprint、IBM EDT、Lean UX 与设计系统工作流。 流程体系" [ref=f3e58] [cursor=pointer]:
+        - /url: /process/design-process
+        - text: "03"
+        - generic [ref=f3e59]:
+          - text: 方法流程
+          - generic [ref=f3e60]: 双钻模型、Design Sprint、IBM EDT、Lean UX 与设计系统工作流。
+        - link "流程体系" [ref=f3e62]:
+          - /url: /process/design-process
+      - link "04 参照体系 Material 3、Apple HIG、Fluent 2、Ant Design v6 等设计语言官方索引与借鉴点。 设计语言索引" [ref=f3e63] [cursor=pointer]:
+        - /url: /languages/design-languages
+        - generic [ref=f3e64]: "04"
+        - generic [ref=f3e65]:
+          - text: 参照体系
+          - generic [ref=f3e66]: Material 3、Apple HIG、Fluent 2、Ant Design v6 等设计语言官方索引与借鉴点。
+        - link "设计语言索引" [ref=f3e68]:
+          - /url: /languages/design-languages
+      - link "05 场景落地 七类产品的约束矩阵、高频模式，以及三条已证伪的过时教条。 产品约束矩阵" [ref=f3e69] [cursor=pointer]:
+        - /url: /patterns/product-patterns
+        - generic [ref=f3e70]: "05"
+        - generic [ref=f3e71]:
+          - text: 场景落地
+          - generic [ref=f3e72]: 七类产品的约束矩阵、高频模式，以及三条已证伪的过时教条。
+        - link "产品约束矩阵" [ref=f3e74]:
+          - /url: /patterns/product-patterns
+      - link "06持续追踪 · Hubs 设计师、灵感资源、学习索引、工具四类独立 hub，全部条目带存活状态与取用日期。 设计师 灵感 学习 工具" [ref=f3e75] [cursor=pointer]:
+        - /url: /resources/hubs-designers
+        - text: "06"
+        - generic [ref=f3e76]:
+          - text: 持续追踪 · Hubs
+          - generic [ref=f3e77]: 设计师、灵感资源、学习索引、工具四类独立 hub，全部条目带存活状态与取用日期。
+        - generic [ref=f3e78]:
+          - link "设计师" [ref=f3e79]:
+            - /url: /resources/hubs-designers
+          - link "灵感" [ref=f3e80]:
+            - /url: /resources/hubs-inspiration
+          - link "学习" [ref=f3e81]:
+            - /url: /resources/hubs-learning
+          - link "工具" [ref=f3e82]:
+            - /url: /resources/hubs-tools
+    - generic [ref=f3e83]:
+      - generic [ref=f3e84]:
+        - strong [ref=f3e85]: "26"
+        - text: UX 法则
+      - generic [ref=f3e86]:
+        - strong [ref=f3e87]: "10"
+        - text: 可用性启发式
+      - generic [ref=f3e88]:
+        - strong [ref=f3e89]: "9"
+        - text: 设计语言
+      - generic [ref=f3e90]:
+        - strong [ref=f3e91]: "7"
+        - text: 产品类型
+      - generic [ref=f3e92]:
+        - strong [ref=f3e93]: "3"
+        - text: 已证伪教条
+      - generic [ref=f3e94]:
+        - strong [ref=f3e95]: "14"
+        - text: 设计师 Hub 条目
+    - generic [ref=f3e96]:
+      - heading "三类高频判断场景 Permalink to \"三类高频判断场景\"" [level=2] [ref=f3e97]:
+        - text: 三类高频判断场景
+        - link "Permalink to \"三类高频判断场景\"":
+          - /url: "#三类高频判断场景"
+      - paragraph [ref=f3e98]:
+        - strong [ref=f3e99]: 判断现有设计是否有问题
+        - text: （design review）—— 先到「场景落地」确认产品类型的反模式，再用「判断依据」层的十启发式逐条走查、WCAG 硬数字判合规，最后用 UX 法则做心理学归因。输出结论区分"确定违规"（有硬数字支撑）与"风格建议"（注明主观），并主动排除已证伪教条。
+      - paragraph [ref=f3e100]:
+        - strong [ref=f3e101]: 按某个设计风格重构
+        - text: （style refactor）—— 到「参照体系」选定语言体系（Material 3 / HIG / Fluent 2 / Ant Design v6…），提取该语言的 tokens、组件约定与明暗策略，回「场景落地」校验产品类型约束不冲突，落地优先复用该语言官方组件库。
+      - paragraph [ref=f3e102]:
+        - strong [ref=f3e103]: 以专业设计师视角审视
+        - text: （professional critique）—— 按「方法流程」的提问顺序自战略层向表现层逐层检查，用「认知入口」的四问框架（心智模型匹配吗？五特征达标吗？流程想清楚了吗？情感层加分吗？），结论按"问题 → 根因（法则引用）→ 建议"组织。
+      - heading "引用纪律 Permalink to \"引用纪律\"" [level=2] [ref=f3e104]:
+        - text: 引用纪律
+        - link "Permalink to \"引用纪律\"":
+          - /url: "#引用纪律"
+      - list [ref=f3e105]:
+        - listitem [ref=f3e106]: 凡涉及版本、状态、数值的论断均带取用日期（当前快照：2026-09-02）
+        - listitem [ref=f3e107]: 事实性论断挂来源（L0 官方 / L2 行业 / E 实证）；厂商自测数据标注"声称"
+        - listitem [ref=f3e108]: 三次点击法则、"必须全放首屏"、7±2 菜单上限等已证伪教条有专表，审稿时主动排除
+        - listitem [ref=f3e109]:
+          - text: 本站是 agent 信息源：全部正文为静态 Markdown 渲染的稳定 HTML，页面元信息见各页 frontmatter 与站点根
+          - code [ref=f3e110]: llms.txt
+      - heading "给 Agent Permalink to \"给 Agent\"" [level=2] [ref=f3e111]:
+        - text: 给 Agent
+        - link "Permalink to \"给 Agent\"":
+          - /url: "#给-agent"
+      - paragraph [ref=f3e112]: 本站为机器消费做了如下设计：
+      - list [ref=f3e113]:
+        - listitem [ref=f3e114]:
+          - text: 每页
+          - code [ref=f3e115]: description
+          - text: frontmatter 声明内容摘要；标题层级稳定，锚点为中文原文字段
+        - listitem [ref=f3e116]:
+          - text: 站点根提供
+          - link [ref=f3e117] [cursor=pointer]:
+            - /url: /llms.txt
+            - code [ref=f3e118]: llms.txt
+          - text: 索引（页面清单 + 一句话摘要）
+        - listitem [ref=f3e119]: 知识以长文 + 锚点为主，交互组件只承担导航索引，不承载正文
+        - listitem [ref=f3e120]:
+          - text: 复用约定与扩展规则见仓库根
+          - link "AGENTS.md" [ref=f3e121] [cursor=pointer]:
+            - /url: https://github.com/zenHeart/learn-design/blob/master/AGENTS.md
+  - contentinfo [ref=f3e122]:
+    - generic [ref=f3e123]:
+      - paragraph [ref=f3e124]: 面向 agent 与工程师的设计判断层知识库
+      - paragraph [ref=f3e125]: zenHeart

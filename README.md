@@ -18,25 +18,26 @@
 
 ```
 ├─ README.md                      ← 本文件：站点宪法、放置规则、执行 goal
+├─ AGENTS.md                      ← agent 消费与贡献指南（机器可读入口）
 └─ docs/
    ├─ books/                      ① 认知入口：经典书籍共性 → 四层认知模型
    │  └─ design-books.md
    ├─ foundations/                ① 认知入口：术语、单位、印刷/屏幕基础
-   │  ├─ term.md
-   │  ├─ concept-unit.md
-   │  └─ concept-bleeding.md
    ├─ principles/                 ② 判断依据：心理学法则 + 启发式 + 无障碍硬数字
-   │  ├─ lawsofux.md              UX 法则 26 条（lawsofux.com 中文沉淀，含 BAD/GOOD SVG 对比图）
+   │  ├─ lawsofux.md              UX 法则 26 条（含卡片索引与 BAD/GOOD SVG 对比图）
    │  ├─ heuristics-wcag.md       Nielsen 十启发式走查问句 + WCAG 2.2 关键数值
    │  └─ images/                  法则配图（11 张 SVG）
    ├─ process/                    ③ 方法流程：双钻/Sprint/IBM EDT/Lean UX/设计系统工作流
-   │  └─ design-process.md
    ├─ languages/                  ④ 参照体系：主流设计语言官方索引与借鉴点
-   │  └─ design-languages.md
    ├─ patterns/                   ⑤ 场景落地：产品类型约束矩阵 + 反模式 + 已证伪教条
-   │  └─ product-patterns.md
-   └─ resources/                  ⑥ 持续追踪：工具版图、灵感 hub、存活状态
-      └─ hubs-tools.md
+   ├─ resources/                  ⑥ 持续追踪：四类独立 Hub（全部条目带存活状态）
+   │  ├─ hubs-designers.md        设计师 Hub（14 位，站点实证可达）
+   │  ├─ hubs-inspiration.md      灵感资源 Hub
+   │  ├─ hubs-learning.md         学习索引 Hub
+   │  └─ hubs-tools.md            工具 Hub（42 站实证 + 证伪清单）
+   ├─ index.md                    站点首页（宣言 + 知识地图 + 三场景）
+   ├─ public/llms.txt             agent 机器索引入口
+   └─ .vitepress/theme/           站点自身的设计系统（印刷档案方向）
 ```
 
 草稿区 `_draft/` 放未完成主题（当前：design-navifation.md 导航设计）。
@@ -53,7 +54,17 @@
 
 **⑤ patterns — 先定类型再谈约束**：落地页首屏的任务是建立滚动理由而非塞满信息；电商最大弃车归因是费用突现；仪表盘先定义决策再定义图表；移动端底部可达区决定导航；桌面端效率优先于可发现性；文档站按 Diataxis 四象限分流；AI 产品当前共识是"设定预期、可解释、可纠正"，无统一标准。**三次点击法则、"必须全放首屏"、7±2 菜单上限均已被证伪**，遇到引用这些教条的批评先降权。
 
-**⑥ resources — 引用前查状态**：42 站 2026-09-02 实证快照；AI 设计工具是改名/关停高发区（Galileo→Google Stitch、v0.dev→v0.app、XD 维护模式），表内未标注"活跃"的条目引用前先复核。
+**⑥ resources — 引用前查状态**：拆为四类独立 hub（设计师 14 位 / 灵感资源 / 学习索引 / 工具 42 站实证），全部条目带存活状态与取用日期；AI 设计工具是改名/关停高发区（Galileo→Google Stitch、v0.dev→v0.app、XD 维护模式），未标注"活跃"的条目引用前先复核。
+
+## 站点自身的设计语言
+
+站点按"印刷档案 × 瑞士网格 × 编辑排版"方向设计（2026-09-02 由 UX 架构/视觉/动效/内容形态四路专家调研综合定案）：
+
+- **签名元素**：藏品编号系统（01–06 层级 + UX-## 法则编号，Space Grotesk tabular figures）+ 朱砂批注红 + 档案戳
+- **纪律**：层级靠字阶与 1px 线不靠阴影；圆角 ≤2px；动效只动 transform/opacity 且尊重 `prefers-reduced-motion`；正文遵循 W3C clreq 中文排版
+- **双模式**：明 = 暖纸 #FAF9F6 / 墨 #1A1C1E / 朱砂 #C8401E；暗 = 墨青 #14161A / 纸白 #E8E6E1 / 朱砂亮 #E8683F
+- **agent 可读性**：Markdown-first，正文为静态 HTML；交互组件只承担导航索引不承载正文；每页 frontmatter 声明 description；站点根 `llms.txt` 为机器索引
+- 实现位置：`docs/.vitepress/theme/`（tokens 与组件纪律见 custom.css 顶部注释）
 
 ## Agent 使用指南（三大场景工作流）
 

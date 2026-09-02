@@ -1,0 +1,26 @@
+# Learn Design
+
+> 体系化设计认知知识库：面向 agent 与工程师的设计判断层。不做权威规范拷贝，沉淀跨信源综合的共性、可执行硬数字与已验证信源地图。快照日期 2026-09-02。
+
+## 知识地图（六层认知管线）
+
+- [首页 / 知识地图](https://design.zenheart.site/)：六层框架、三类判断场景工作流、引用纪律
+- [经典设计书籍共性提炼](https://design.zenheart.site/books/design-books)：9 本经典 → 四层认知模型，含微信读书热门划线证据
+- [UX 设计法则（26 条）](https://design.zenheart.site/principles/lawsofux)：lawsofux.com 全量中文沉淀，六类分组，每条含 BAD/GOOD 对比与设计应用
+- [可用性启发式与无障碍基线](https://design.zenheart.site/principles/heuristics-wcag)：Nielsen 十启发式走查问句 + WCAG 2.2 硬数字
+- [设计工作流与流程体系](https://design.zenheart.site/process/design-process)：双钻 / Design Sprint / IBM EDT / Lean UX 对照 + 跨体系 7 共性
+- [主流设计语言索引](https://design.zenheart.site/languages/design-languages)：Material 3 / HIG / Fluent 2 / Ant Design v6 等官方索引与借鉴点
+- [产品类型设计约束矩阵](https://design.zenheart.site/patterns/product-patterns)：七类产品约束 + 跨类型共识 + 三条已证伪教条
+
+## Hubs（持续追踪层）
+
+- [设计师 Hub](https://design.zenheart.site/resources/hubs-designers)：14 位设计师与学者，站点全部实证可达
+- [灵感资源 Hub](https://design.zenheart.site/resources/hubs-inspiration)：真实产品 / 流程 / 落地页 / 作品集灵感站点
+- [学习索引 Hub](https://design.zenheart.site/resources/hubs-learning)：研究文章 / 法则速查 / 设计系统索引 / 中文排版规范
+- [工具 Hub](https://design.zenheart.site/resources/hubs-tools)：UI 协作 / 原型 / 白板 / 图标 / 字体 / 交接 / AI 工具，含改名关停证伪清单
+
+## Agent 使用要点
+
+- 引用规则：事实性论断带来源层级（L0 官方 / L2 行业 / E 实证）与取用日期；厂商自测数据标"声称"
+- 已证伪教条（三次点击法则、"必须全放首屏"、7±2 菜单上限）不作为批评依据
+- 站点更新规则与放置约定见仓库根 AGENTS.md 与 README.md
