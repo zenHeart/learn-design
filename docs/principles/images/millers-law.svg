@@ -1,0 +1,102 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bad-bg { fill: #ffebee; }
+      .good-bg { fill: #e8f5e9; }
+      .brain { fill: #ffecb3; stroke: #ffc107; }
+      .slot { fill: white; stroke: #e0e0e0; rx: 4; }
+      .slot-filled { fill: #c8e6c9; stroke: #4caf50; }
+      .item { fill: #90caf9; rx: 4; }
+      .group { fill: white; stroke: #4caf50; stroke-width: 2; rx: 8; }
+    </style>
+  </defs>
+  
+  <!-- BAD Example -->
+  <rect x="10" y="10" width="380" height="380" class="bad-bg" rx="10"/>
+  <text x="200" y="45" text-anchor="middle" fill="#c62828" font-size="18" font-weight="bold">❌ BAD - 记忆负担重</text>
+  
+  <!-- Brain with too many items -->
+  <g transform="translate(40, 70)">
+    <!-- Brain outline -->
+    <ellipse cx="160" cy="100" rx="140" ry="80" class="brain"/>
+    <text x="160" y="20" text-anchor="middle" fill="#c62828" font-size="13" font-weight="bold">工作记忆</text>
+    
+    <!-- Too many slots - showing overflow -->
+    <g transform="translate(30, 60)">
+      <rect x="0" y="0" width="25" height="25" class="slot-filled"/>
+      <rect x="30" y="0" width="25" height="25" class="slot-filled"/>
+      <rect x="60" y="0" width="25" height="25" class="slot-filled"/>
+      <rect x="90" y="0" width="25" height="25" class="slot-filled"/>
+      <rect x="120" y="0" width="25" height="25" class="slot-filled"/>
+      <rect x="150" y="0" width="25" height="25" class="slot-filled"/>
+      <rect x="180" y="0" width="25" height="25" class="slot-filled"/>
+      <rect x="210" y="0" width="25" height="25" class="slot-filled"/>
+      <rect x="0" y="30" width="25" height="25" class="slot-filled"/>
+      <rect x="30" y="30" width="25" height="25" class="slot-filled"/>
+      <rect x="60" y="30" width="25" height="25" class="slot-filled"/>
+      <rect x="90" y="30" width="25" height="25" class="slot-filled"/>
+      <rect x="120" y="30" width="25" height="25" class="slot-filled"/>
+      
+      <!-- Overflow indicator -->
+      <text x="175" y="45" fill="#c62828" font-size="10">...</text>
+    </g>
+    
+    <text x="160" y="180" text-anchor="middle" fill="#c62828" font-size="12">❌ 15+ 项同时记忆</text>
+    <text x="160" y="200" text-anchor="middle" fill="#c62828" font-size="11">超出大脑容量，记忆混乱</text>
+    
+    <!-- Example: Contact list -->
+    <rect x="30" y="215" width="260" height="50" fill="#ffcdd2" rx="4"/>
+    <text x="160" y="235" text-anchor="middle" fill="#c62828" font-size="10">通讯录：500 个联系人无分组</text>
+    <text x="160" y="252" text-anchor="middle" fill="#c62828" font-size="10">→ 找不到想要的联系人</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 400 200 L 430 200" stroke="#2196f3" stroke-width="3" fill="none"/>
+  <polygon points="430,200 420,195 420,205" fill="#2196f3"/>
+  
+  <!-- GOOD Example -->
+  <rect x="410" y="10" width="380" height="380" class="good-bg" rx="10"/>
+  <text x="600" y="45" text-anchor="middle" fill="#2e7d32" font-size="18" font-weight="bold">✅ GOOD - 分组记忆</text>
+  
+  <!-- Brain with organized groups -->
+  <g transform="translate(440, 70)">
+    <!-- Brain outline -->
+    <ellipse cx="160" cy="100" rx="140" ry="80" class="brain"/>
+    <text x="160" y="20" text-anchor="middle" fill="#2e7d32" font-size="13" font-weight="bold">工作记忆</text>
+    
+    <!-- 3 Groups with ~5 items each -->
+    <g transform="translate(30, 55)">
+      <!-- Group 1: Family -->
+      <rect x="0" y="0" width="70" height="70" class="group"/>
+      <text x="35" y="15" text-anchor="middle" fill="#4caf50" font-size="9">👨‍👩‍👧 家人</text>
+      <rect x="8" y="22" width="54" height="12" class="item"/>
+      <rect x="8" y="38" width="54" height="12" class="item"/>
+      <rect x="8" y="54" width="54" height="12" class="item"/>
+      
+      <!-- Group 2: Friends -->
+      <rect x="80" y="0" width="70" height="70" class="group"/>
+      <text x="115" y="15" text-anchor="middle" fill="#4caf50" font-size="9">👯 朋友</text>
+      <rect x="88" y="22" width="54" height="12" class="item"/>
+      <rect x="88" y="38" width="54" height="12" class="item"/>
+      <rect x="88" y="54" width="54" height="12" class="item"/>
+      
+      <!-- Group 3: Work -->
+      <rect x="160" y="0" width="70" height="70" class="group"/>
+      <text x="195" y="15" text-anchor="middle" fill="#4caf50" font-size="9">💼 同事</text>
+      <rect x="168" y="22" width="54" height="12" class="item"/>
+      <rect x="168" y="38" width="54" height="12" class="item"/>
+      <rect x="168" y="54" width="54" height="12" class="item"/>
+    </g>
+    
+    <!-- Only 3 chunks to remember -->
+    <text x="160" y="155" text-anchor="middle" fill="#2e7d32" font-size="12">✅ 3 组 × 3-5 项 = 9 项</text>
+    <text x="160" y="175" text-anchor="middle" fill="#2e7d32" font-size="11">符合 7±2 记忆法则</text>
+    
+    <!-- Example: Organized contact list -->
+    <rect x="30" y="190" width="260" height="80" fill="#c8e6c9" rx="4"/>
+    <text x="50" y="212" fill="#2e7d32" font-size="10">👨‍👩‍👧 家人 (3)</text>
+    <text x="130" y="212" fill="#2e7d32" font-size="10">👯 朋友 (5)</text>
+    <text x="210" y="212" fill="#2e7d32" font-size="10">💼 同事 (4)</text>
+    <text x="160" y="245" text-anchor="middle" fill="#2e7d32" font-size="10">→ 快速找到目标联系人 ✓</text>
+  </g>
+</svg>
