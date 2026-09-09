@@ -31,7 +31,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'UX 设计法则（26 条）', link: '/principles/lawsofux' },
-          { text: '启发式与 WCAG 基线', link: '/principles/heuristics-wcag' }
+          { text: '启发式与 WCAG 基线', link: '/principles/heuristics-wcag' },
+          { text: '我的设计哲学', link: '/principles/personal-design-philosophy' }
         ]
       },
       {
