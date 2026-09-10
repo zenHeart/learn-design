@@ -8,6 +8,9 @@ import HeroManifest from './components/HeroManifest.vue'
 import LayerIndex from './components/LayerIndex.vue'
 import StatsBand from './components/StatsBand.vue'
 import LawIndex from './components/LawIndex.vue'
+import ResourceGrid from './components/ResourceGrid.vue'
+import DesignerWall from './components/DesignerWall.vue'
+import ToolWall from './components/ToolWall.vue'
 import Layout from './Layout.vue'
 
 export default {
@@ -18,5 +21,8 @@ export default {
     app.component('LayerIndex', LayerIndex)
     app.component('StatsBand', StatsBand)
     app.component('LawIndex', LawIndex)
+    app.component('ResourceGrid', ResourceGrid)
+    app.component('DesignerWall', DesignerWall)
+    app.component('ToolWall', ToolWall)
   }
 }

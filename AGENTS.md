@@ -20,10 +20,12 @@
 
 ## 架构与基石索引
 
+- **现代研发全景与 SOP 演进**：[docs/overview/design-landscape.md](docs/overview/design-landscape.md)（研发全周期中 UI/UX 的真实定位、三代交付 SOP 演进与面向工程师的聚焦边界）。
 - **信息架构（IA）**：[docs/foundations/information-architecture.md](docs/foundations/information-architecture.md)（北极熊书四大系统、Dan Brown 八原则、Abby Covert 三元模型、Diátaxis 框架、卡片分类与树测试）。
 - **视觉组织法则**：[docs/principles/gestalt.md](docs/principles/gestalt.md)（格式塔 5 大经典原则 + 5 大现代扩展原则）。
 - **工程设计及格线**：[docs/foundations/quickstart.md](docs/foundations/quickstart.md)（8pt 间距系统、三级灰阶、CRAP 原则极简代码实战）。
 - **屏幕度量衡**：[docs/foundations/concept-unit.md](docs/foundations/concept-unit.md)（px/rem/dp/epx 跨平台对账）。
+- **资源生态与符号雷达**：[docs/resources/hubs-tools.md](docs/resources/hubs-tools.md)（状态雷达）、[docs/resources/hubs-learning.md](docs/resources/hubs-learning.md)（大厂团队博客与周刊矩阵）、[docs/resources/hubs-designers.md](docs/resources/hubs-designers.md)（大师思想图谱）。
 
 ## 如何贡献内容
 

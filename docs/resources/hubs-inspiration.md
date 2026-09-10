@@ -1,32 +1,55 @@
 ---
-title: 灵感资源 Hub
-description: 真实产品截图、用户流、落地页与作品集类灵感站点索引；每条含定位与存活状态，2026-09-02 实证。
+title: 灵感资源 Hub · 真实产品与交互库
+description: 真实生产级产品截图、用户流视频、落地页与 Moodboard 灵感站点索引；清晰区分落地与概念稿，2026-09 实证。
 ---
 
-# 灵感资源 Hub
+# 灵感资源 Hub · 真实产品与交互库
 
-> 灵感检索按"你要看什么"选站：看真实产品的完整界面用 Mobbin，看操作流程用 Page Flows，看落地页用 Lapa Ninja，看作品集用 Behance/Dribbble，做 moodboard 用 Cosmos/Savee。
+> **"看灵感时，90% 的价值来自于已经经过市场和商业化洗礼的'真实产品'。"**  
+> 避免直接从概念稿（如 Dribbble/Behance 上的纯概念动效）中照搬布局，因为它们往往忽视了文字溢出、多语言适配、复杂表单错误与性能瓶颈。本 Hub 优先收录记录真实生产环境 UI 与业务流程的灵感库。
 
-## 真实产品与流程（最能指导落地的灵感）
+---
 
-| 站点 | URL | 定位 | 状态 |
+## 真实产品与交互操作流（最能直接指导工程落地）
+
+这类站点捕获的是线上真实跑着的 App 或 Web 应用，包含完整的边界情况、空状态和复杂流程：
+
+| 平台名称 | 官方链接 | 核心特色与聚类定位 | 推荐使用场景 |
 |---|---|---|---|
-| Mobbin | <https://mobbin.com> | 40 万+ 真实 App 截图与流程库，可按平台/模式筛选 | 活跃；免费浏览 + Pro 付费 |
-| Page Flows | <https://pageflows.com> | 真实产品的用户操作流视频（注册/结账/取消订阅等） | 活跃；已吸收 Screenlane |
-| Lapa Ninja | <https://lapa.ninja> | 7000+ 落地页精选，按风格/行业分类，免费 | 活跃 |
+| **Mobbin** | <https://mobbin.com> | 40 万+ 真实 iOS/Android/Web 截图与交互流，支持按组件、模式、页面类型精细过滤 | 调研业界主流产品的注册、支付、设置、引导流程 |
+| **Page Flows** | <https://pageflows.com> | 真实产品的全流程录屏（含已合并的 Screenlane） | 学习大厂如何处理长表单分步、多步骤结账与账户注销 |
+| **Lapa Ninja** | <https://lapa.ninja> | 7000+ 精选高水准营销落地页（Landing Pages），按行业分类 | 策划官方主页、SaaS 推广页或个人开源项目官网 |
+| **recent.design** | <https://recent.design> | 每日精选最新上线的高审美极简与前沿设计站点（已吸收 Godly） | 感受现代 Web 前沿动效、字体排印与氛围感 |
 
-## 作品集与 moodboard
+---
 
-| 站点 | URL | 定位 | 状态 |
+## 作品集与 Moodboard 情绪板（激发视觉构想）
+
+当需要确定新产品的视觉调性、配色倾向或品牌探索时使用：
+
+| 平台名称 | 官方链接 | 核心特色与聚类定位 | 避坑提醒 |
 |---|---|---|---|
-| Behance | <https://behance.net> | Adobe 旗下综合作品集，项目完成度高 | 在线 |
-| Dribbble | <https://dribbble.com> | 设计师作品展示 + 接单市场 | 运营中但社区信任受损（2025 ToS 争议与设计师出走潮，单方叙事保留双向） |
-| Cosmos | <https://cosmos.so> | 视觉搜索型收藏墙，适合建 moodboard | 活跃；免费约 500 项上限 |
-| Savee | <https://savee.com> | 设计师灵感收藏墙，审美密度高 | 活跃（原 savee.it 已 301 迁移） |
-| recent.design | <https://recent.design> | 精选最新上线的网站 | 活跃；Godly 已并入 |
+| **Cosmos** | <https://cosmos.so> | 新一代极简视觉搜索与灵感收藏工具，审美浓度极高 | 免费版有约 500 项收藏上限，适合做单期项目 Moodboard |
+| **Savee** | <https://savee.com> | 专为设计师打造的极速图片灵感流，注重版面与留白 | 纯视觉输入，不可直接作为交互逻辑依据 |
+| **Behance** | <https://behance.net> | Adobe 旗下综合设计社区，项目展示往往包含完整的品牌与系统推导 | 重点学习优秀团队的 Case Study 推导过程与设计包装 |
+| **Dribbble** | <https://dribbble.com> | 传统单帧设计展示社区 | **审慎对待**：概念性过强、反常规 UI 较多；近期因商业化社区生态波动，单方评价仅供参考 |
 
-## 检索纪律
+---
 
-- 看灵感时优先"真实产品"类（Mobbin/Page Flows）——作品集类常为不可落地的概念稿，直接照抄会引入可用性问题；概念稿只看构图与情绪。
-- 已消亡站点（Screenlane、Godly 独立站）不再作为独立信源引用。
-- 更多学习型资源见 [学习索引 Hub](/resources/hubs-learning)；工具见 [工具 Hub](/resources/hubs-tools)。
+## 工程师灵感摄取工作流（4 步法则）
+
+```
+[明确业务需求]
+      ↓
+1. 先查 Mobbin / Page Flows ──→ 寻找 3 家同类头部成熟产品，拆解其页面元素与信息层级
+      ↓
+2. 走查极值与边界 ─────────────→ 查看空状态、网络错误、超长文字、极端视口下的表现
+      ↓
+3. 建立 Moodboard (Cosmos) ───→ 提炼颜色搭配、字体氛围与微动效感觉
+      ↓
+4. 结合 Design Tokens 落地 ─────→ 融入既有设计系统，输出为规范组件
+```
+
+- 想要查找具体的设计师和先驱？前往 [设计师 Hub](/resources/hubs-designers)。
+- 想要检索配套工具或技术库？前往 [工具 Hub](/resources/hubs-tools)。
+- 想要追踪大厂官方团队的设计动态？前往 [学习索引 Hub](/resources/hubs-learning)。

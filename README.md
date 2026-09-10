@@ -4,22 +4,25 @@
 
 ## 定位与架构理念
 
-采用**「实战任务轨（Task-Driven）」**与**「知识基座轨（Knowledge-Based）」**两轨四柱架构，服务于三类高频判断场景，直达硬结论：
+采用**「全景大图先行（Landscape First） × 实战任务轨（Task-Driven） × 知识基座轨（Knowledge-Based）」**架构，拒绝无意义平铺冗余导航，以克制、高阶意图直达硬结论：
 
-1. **判断现有设计是否有问题**（design review）→ 载入 [场景 A：设计走查体检表](docs/workflows/design-review.md)
-2. **按某个设计风格重构**（style refactor）→ 载入 [场景 B：风格选型与重构指南](docs/workflows/style-refactor.md)
-3. **以专业设计师视角审视**（professional critique）→ 载入 [场景 C：专业设计审视框架](docs/workflows/professional-critique.md)
+1. **先看全景大图，明确定位与 SOP 演进** → 载入 [现代研发全景中的设计体系](docs/overview/design-landscape.md)
+2. **判断现有设计是否有问题**（design review）→ 载入 [场景 A：设计走查体检表](docs/workflows/design-review.md)
+3. **按某个设计风格重构**（style refactor）→ 载入 [场景 B：风格选型与重构指南](docs/workflows/style-refactor.md)
+4. **以专业设计师视角审视**（professional critique）→ 载入 [场景 C：专业设计审视框架](docs/workflows/professional-critique.md)
 
 与 `learn-css` 互补：这里记设计判断与认知架构，那边记前端实现手法。
 
 ---
 
-## 知识地图（两轨四柱全景）
+## 知识地图（全景先行与核心矩阵）
 
 ```
 ├─ README.md                                  ← 本文件：站点宪法、放置规则、执行 goal
 ├─ AGENTS.md                                  ← Agent 消费与贡献指南（机器可读入口）
 └─ docs/
+   ├─ overview/                               【全景先行：现代研发体系与 SOP 演进】
+   │  └─ design-landscape.md                  全景大图：UI/UX 处于什么环节、20年 SOP 演进与聚焦边界
    ├─ workflows/                              【第一轨：实战任务轨 Playbooks】
    │  ├─ design-review.md                     场景 A：10分钟设计走查体检表（WCAG 红线+启发式）
    │  ├─ style-refactor.md                    场景 B：设计系统选型与重构指南（决策树+Token落地）
@@ -44,11 +47,11 @@
    │  └─ design-languages.md                  Material 3 / Apple HIG / Fluent 2 / Ant Design v6 等索引与借鉴
    ├─ patterns/                               【场景落地：产品模式】
    │  └─ product-patterns.md                  七类产品约束矩阵（SaaS 仪表盘、AI Agent、落地页等）
-   ├─ resources/                              【持续追踪：资源生态 Hubs】
-   │  ├─ hubs-tools.md                        工具与效能 Hub（42 站实证 + 改名关停证伪清单）
-   │  ├─ hubs-inspiration.md                  真实产品流与落地页灵感 Hub
-   │  ├─ hubs-learning.md                     研究文章与学习索引 Hub
-   │  └─ hubs-designers.md                    14 位大师与学者主页 Hub（全部实证可达）
+   ├─ resources/                              【持续追踪：资源生态 Hubs（图形雷达化）】
+   │  ├─ hubs-tools.md                        工具 Hub · 状态雷达（带生命周期状态药丸与协议风险提示）
+   │  ├─ hubs-learning.md                     学习索引 Hub · 官方博客与周刊矩阵（大厂设计博客 + rss-workflow 源）
+   │  ├─ hubs-designers.md                    设计师 Hub · 先驱思想图谱（14 位大师头像徽章墙与第一手信源）
+   │  └─ hubs-inspiration.md                  灵感资源 Hub · 真实产品库（Mobbin / Page Flows 生产级产品调研）
    ├─ index.md                                站点首页（双轨看板 + 统计数据 + 给 Agent 指南）
    ├─ public/llms.txt                         Agent 全站机器索引入口
    └─ .vitepress/theme/                       站点自身的设计系统（印刷档案 × 瑞士网格）
@@ -58,7 +61,8 @@
 
 ## 核心认知摘要
 
-- **实战 Playbooks**：将 README 口号实体化为落地单。Review 阶段用 4.5:1 对比度与 24px 触控目标一票否决；重构阶段用 DTCG 三层 Token（Global-Semantic-Component）解耦样式；评审阶段用 Garrett 五层模型逆向提问。
+- **全景大图先行**：理清 UI（感知层：视觉、间距、微动效）与 UX（认知层：信息流转、任务闭环、心智模型）的分野；理解从 PS 切图标注（1.0）到 Sketch 组件库（2.0）再到 Figma + DTCG Tokens 现代同构（3.0）的 SOP 演进；明确本站边界在于培养工程师的审美直觉与硬性红线。
+- **实战 Playbooks**：将设计口号实体化为落地单。Review 阶段用 4.5:1 对比度与 24px 触控目标一票否决；重构阶段用 DTCG 三层 Token（Global-Semantic-Component）解耦样式；评审阶段用 Garrett 五层模型逆向提问。
 - **信息架构（IA）**：任何数字界面的骨架均由四大系统（组织、标签、导航、搜索）构成；遵循 Dan Brown 渐进披露与前门原则；技术文档严格按 Diátaxis 四象限（教程/操作/参考/解释）分流。
 - **基础及格线**：工程师界面的核心是“视觉秩序”。8pt 网格建立间距数学节奏，三级灰阶取代彩色滥用，CRAP 四原则（对比、重复、对齐、亲密性）统揽排版。
 - **法则与知觉**：Nielsen 十启发式负责走查发现问题，Laws of UX 26 条负责归因心理机制，格式塔知觉法则（接近、相似、连续、闭合、图底、共同区域）负责解释视觉编组。
@@ -79,32 +83,33 @@
 
 | 内容性质 | 放置位置 | 规范要求 |
 |---|---|---|
+| 全景大图与定位 | `docs/overview/` | 强调产品研发生命周期与设计在工程中的位置 |
 | 可执行的场景落地手册 | `docs/workflows/` | 提供明确的步骤、Checklist 与评级模板 |
 | 基础概念/术语/单位 | `docs/foundations/` | 无空壳、消灭历史无意义占位符、附跨平台对账 |
 | 法则、原则、合规数字 | `docs/principles/` | 挂载 L0 国际规范或权威实验证据，一主题一文件 |
 | 流程体系与工作流 | `docs/process/` | 强调跨体系共性与适用边界 |
 | 设计系统与语言深度展开 | `docs/languages/` | 提炼“最值得借鉴的一点”，链接官方 Canonical URL |
 | 产品形态约束与前沿模式 | `docs/patterns/` | 区分产品类型，强化 AI Agent 与 SaaS 约束 |
-| 工具/灵感/站点生态 | `docs/resources/` | 必须附带 HTTP 实证状态与取用日期 |
+| 工具/灵感/站点生态 | `docs/resources/` | 必须附带 HTTP 实证状态与取用日期，图形雷达化展示 |
 | 未完成主题 | `_draft/` | 完成并通过验证后迁入正式层 |
 
 ---
 
 ## 执行队列进展
 
-1. ✅ **三大实战场景 Playbook 实体化**：`workflows/design-review.md`、`style-refactor.md`、`professional-critique.md` 正式上线。
-2. ✅ **信息架构（IA）核心体系入库**：北极熊书、Dan Brown 八原则、Abby Covert 模型、Diátaxis、卡片分类全景沉淀在 `foundations/information-architecture.md`。
-3. ✅ **历史残卷与占位符清剿**：彻底删除 `term.md` 2017 年 `foo/bar`，重写为现代 UI/UX 核心术语表；补全 `concept-unit.md` 现代屏幕单位。
-4. ✅ **工程师设计及格线实战入库**：`foundations/quickstart.md` 提供 15 分钟建立界面视觉秩序指南。
-5. ✅ **格式塔知觉组织原则专篇**：`principles/gestalt.md` 沉淀 5 经典 + 5 现代扩展法则。
-6. ✅ **已证伪设计教条深度考据专篇**：`principles/falsified-dogmas.md` 沉淀三次点击、首屏折叠与 7±2 迷思的铁证。
-7. ✅ **AI 对话 / Agent 交互模式深化**：`patterns/product-patterns.md` 深度整合微软 HAX 18 条与 Google PAIR 23 模式。
-8. ⏳ **Windows 桌面设计知识正式入库**：Windows 桌面研究笔记（6 篇基于 Microsoft Learn 提取物）待整理迁入。
-9. ⏳ **lawsofux.md 增量同步**：由 26 条快照同步至最新 30 条词条。
+1. ✅ **现代产品研发全景大图上线**：`overview/design-landscape.md` 全景拆解 UI/UX 定位、三代 SOP 演进与聚焦边界。
+2. ✅ **顶栏与导航栏极简克制重构**：收敛为 4 个核心意图入口，消灭章节平铺碎片化反模式。
+3. ✅ **资源生态交互雷达化升级**：完成 `ResourceGrid`、`DesignerWall`、`ToolWall` 组件，赋能四大 Hub 页面。
+4. ✅ **三大实战场景 Playbook 实体化**：`workflows/design-review.md`、`style-refactor.md`、`professional-critique.md`。
+5. ✅ **信息架构（IA）核心体系入库**：北极熊书、Dan Brown 八原则、Abby Covert 模型、Diátaxis。
+6. ✅ **工程师设计及格线实战入库**：`foundations/quickstart.md` 提供 15 分钟建立界面视觉秩序指南。
+7. ✅ **格式塔知觉组织原则专篇**：`principles/gestalt.md` 沉淀 5 经典 + 5 现代扩展法则。
+8. ✅ **已证伪设计教条深度考据专篇**：`principles/falsified-dogmas.md` 沉淀三次点击、首屏折叠与 7±2 迷思的铁证。
+9. ✅ **AI 对话 / Agent 交互模式深化**：`patterns/product-patterns.md` 深度整合微软 HAX 18 条与 Google PAIR 23 模式。
 
 ---
 
 ## 信源合集与检索档案
 
 基准快照日期：**2026-09-10**。全站论断带 `[Sn]` 引用编号，文内附完整信源合集表（层级 + URL + 取用日期）。
-核心信源覆盖：W3C WCAG 2.2、Diátaxis、Material 3、Apple HIG、Fluent 2、Ant Design v6、NN/g、UIE (Joshua Porter)、Miller (1956)、Wertheimer (1923)、Rosenfeld (Polar Bear Book)、Garrett (Elements of UX)。
+核心信源覆盖：W3C WCAG 2.2、W3C DTCG 2025.10、Diátaxis、Material 3、Apple HIG、Fluent 2、Ant Design v6、NN/g、Linear Readme、Airbnb Design、Stripe Increment、UIE (Joshua Porter)、Miller (1956)、Wertheimer (1923)、Rosenfeld (Polar Bear Book)、Garrett (Elements of UX)。

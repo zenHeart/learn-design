@@ -2,15 +2,18 @@
 
 > 体系化设计认知知识库：面向 Agent 与工程师的设计判断层。不做权威规范拷贝，沉淀跨信源综合的共性、可执行硬数字、已验证信源地图与已证伪教条。快照基准日期 2026-09-10。
 
-## 知识地图（两轨四柱架构）
+## 知识地图（全景先行与两轨四柱架构）
 
-### 实战任务轨（Playbooks）
-- [首页 / 知识地图](https://design.zenheart.site/)：两轨四柱架构全景、三大判断场景工作流与引用纪律
+### 现代研发全景与定位（Overview）
+- [首页 / 知识大图](https://design.zenheart.site/)：双轨架构全景、全景大图导读与三大高频实战工作流入口
+- [现代研发全景中的设计体系：UI/UX 定位、SOP 与聚焦边界](https://design.zenheart.site/overview/design-landscape)：研发全周期全景图、UI 与 UX 职责对比表、20 年 SOP 演进史（Photoshop → Sketch → Figma/Tokens）与本站三大聚焦战略
+
+### 实战落地指南（Playbooks）
 - [场景 A：设计走查体检表](https://design.zenheart.site/workflows/design-review)：代码合入与上线前 10 分钟自查，WCAG 2.2 AA 硬红线 + Nielsen 启发式走查
 - [场景 B：风格选型与重构指南](https://design.zenheart.site/workflows/style-refactor)：主流设计系统选型决策树、DTCG 三层 Token 架构与四步重构实战
 - [场景 C：专业设计审视框架](https://design.zenheart.site/workflows/professional-critique)：Garrett 五层提问阶梯、四问心智模型与跨体系 7 条共性审查
 
-### 基础认知（Foundations）
+### 基础认知与及格线（Foundations）
 - [工程师设计及格线（15分钟上手）](https://design.zenheart.site/foundations/quickstart)：8pt 间距系统、三级灰阶、CRAP 四原则极简代码实战与交互五态
 - [信息架构核心体系（IA 全景）](https://design.zenheart.site/foundations/information-architecture)：北极熊书四大系统、Dan Brown 八原则、Abby Covert 模型、Diátaxis 四象限与卡片分类
 - [经典设计书籍共性提炼](https://design.zenheart.site/books/design-books)：9 本经典 → 四层认知模型（心理/原则/流程/体验），含微信读书热门划线证据
@@ -29,11 +32,11 @@
 - [主流设计语言索引与借鉴点](https://design.zenheart.site/languages/design-languages)：Material 3 Expressive / Apple HIG / Fluent 2 / Ant Design v6 等官方索引与深度借鉴点
 - [产品类型设计约束矩阵](https://design.zenheart.site/patterns/product-patterns)：SaaS 仪表盘、AI Agent（微软 HAX + Google PAIR）、电商与移动端约束矩阵
 
-### 资源生态 Hubs（持续追踪层）
-- [工具与效能 Hub](https://design.zenheart.site/resources/hubs-tools)：UI 协作 / 原型 / 白板 / 图标 / 字体 / 交接 / AI 工具（42 站 HTTP 实证 + 死亡名单）
-- [灵感资源 Hub](https://design.zenheart.site/resources/hubs-inspiration)：真实产品流 / 流程 / 落地页 / 作品集灵感站点
-- [学习索引 Hub](https://design.zenheart.site/resources/hubs-learning)：研究文章 / 法则速查 / 设计系统索引 / 中文排版规范
-- [设计师 Hub](https://design.zenheart.site/resources/hubs-designers)：14 位大师与学者主页（全部实证可达）
+### 资源生态与符号雷达（Hubs & Tools）
+- [工具 Hub · 工具状态雷达](https://design.zenheart.site/resources/hubs-tools)：UI 协作 / 原型 / 白板 / 图标 / 字体 / 交接 / AI 工具（交互式状态雷达 + 死亡名单）
+- [学习索引 Hub · 官方博客与周刊](https://design.zenheart.site/resources/hubs-learning)：大厂官方团队（Linear/Airbnb/Stripe/Vercel 等）博客 + 中文周刊专栏矩阵
+- [设计师 Hub · 先驱思想图谱](https://design.zenheart.site/resources/hubs-designers)：14 位大师单色头像徽章墙与第一手信源检索
+- [灵感资源 Hub · 真实产品库](https://design.zenheart.site/resources/hubs-inspiration)：Mobbin / Page Flows 真实生产级产品流与灵感库
 
 ## Agent 消费与审查契约
 - 引用规则：事实性论断必须标注信源层级（L0 官方 / L2 行业 / L4 著作 / E 实证）与取用日期；厂商自测数据标“声称”
