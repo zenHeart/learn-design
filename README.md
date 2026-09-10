@@ -40,6 +40,7 @@
    │  ├─ heuristics-wcag.md                   Nielsen 十大启发式走查问句 + WCAG 2.2 AA 硬指标
    │  ├─ gestalt.md                           格式塔知觉组织原则（5 经典 + 5 现代扩展法则）
    │  ├─ falsified-dogmas.md                  已证伪设计教条深度考据（3次点击、首屏折叠、7±2 迷思）
+   │  ├─ personal-design-philosophy.md         个人设计哲学：决策优先、稳定工作区与渐进披露
    │  └─ images/                              法则与心理学配图
    ├─ process/                                【方法流程】
    │  └─ design-process.md                    双钻模型 / Sprint / IBM EDT / Lean UX / 跨体系 7 共性

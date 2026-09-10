@@ -22,6 +22,7 @@
 - [从印刷出血到现代屏幕安全区](https://design.zenheart.site/foundations/concept-bleeding)：印刷机械公差出血、Web 全出血布局、移动端异形屏 Safe Area 与视口环境避让
 
 ### 法则与规范（Principles）
+- [个人设计哲学与工作区原则](https://design.zenheart.site/principles/personal-design-philosophy)：决策优先、导航与工具栏分层、稳定工作区、运行态证据和渐进披露
 - [UX 设计法则（26 条全量）](https://design.zenheart.site/principles/lawsofux)：lawsofux.com 全量中文沉淀，六类分组，每条含 BAD/GOOD 对比与设计应用
 - [可用性启发式与 WCAG 基线](https://design.zenheart.site/principles/heuristics-wcag)：Nielsen 十大启发式走查问句 + WCAG 2.2 AA 刚性数字（4.5:1 / 24px）
 - [格式塔知觉组织原则（10 大法则）](https://design.zenheart.site/principles/gestalt)：5 大经典原则（接近/相似/连续/闭合/图底）+ 5 大现代扩展（共同区域/连通性等）

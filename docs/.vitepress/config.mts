@@ -45,6 +45,7 @@ export default defineConfig({
         text: '⚖️ 法则、心理学与红线 (Principles)',
         collapsed: false,
         items: [
+          { text: '个人设计哲学与工作区原则', link: '/principles/personal-design-philosophy' },
           { text: 'UX 设计法则 (26 条全量)', link: '/principles/lawsofux' },
           { text: '格式塔知觉组织原则 (10 大法则)', link: '/principles/gestalt' },
           { text: '可用性启发式与 WCAG 基线', link: '/principles/heuristics-wcag' },
