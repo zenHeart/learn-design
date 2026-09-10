@@ -11,6 +11,10 @@ import LawIndex from './components/LawIndex.vue'
 import ResourceGrid from './components/ResourceGrid.vue'
 import DesignerWall from './components/DesignerWall.vue'
 import ToolWall from './components/ToolWall.vue'
+import LandscapePipeline from './components/LandscapePipeline.vue'
+import SopEvolutionTimeline from './components/SopEvolutionTimeline.vue'
+import GarrettLayerStack from './components/GarrettLayerStack.vue'
+import LawsInteractivePlayground from './components/LawsInteractivePlayground.vue'
 import Layout from './Layout.vue'
 
 export default {
@@ -24,5 +28,9 @@ export default {
     app.component('ResourceGrid', ResourceGrid)
     app.component('DesignerWall', DesignerWall)
     app.component('ToolWall', ToolWall)
+    app.component('LandscapePipeline', LandscapePipeline)
+    app.component('SopEvolutionTimeline', SopEvolutionTimeline)
+    app.component('GarrettLayerStack', GarrettLayerStack)
+    app.component('LawsInteractivePlayground', LawsInteractivePlayground)
   }
 }
