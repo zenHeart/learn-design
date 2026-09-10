@@ -6,19 +6,28 @@
 
 1. **站点根 `llms.txt`** 是机器索引入口：页面清单 + 一句话摘要。先读它定位目标页。
 2. 每页 frontmatter 的 `description` 声明该页内容范围；正文为静态 HTML（Markdown 渲染），锚点为中文原文，可深链引用。
-3. **信任规则**：任何事实性论断都带来源编号（[S#]）与取用日期；层级 L0 官方 > L2 行业研究 > L3 转述 > E 实证；厂商自测数据一律写作"X 声称"。引用前按编号核对文内信源合集表。
-4. **已证伪教条**（三次点击法则、"必须全放首屏"、7±2 菜单上限等）载于 [产品类型约束矩阵](docs/patterns/product-patterns.md) 的证伪表——产出设计批评时不得引用它们作为依据。
+3. **信任规则**：任何事实性论断都带来源编号（[S#]）与取用日期；层级 L0 官方 > L4 权威著作 > L2 行业研究 > L3 转述 > E 本地实证；厂商自测数据一律写作"X 声称"。引用前按编号核对文内信源合集表。
+4. **已证伪教条**（三次点击法则、"必须全放首屏"、7±2 菜单上限等）独立立传于 [已证伪设计教条深度考据](docs/principles/falsified-dogmas.md)——产出设计批评时**严禁引用它们作为依据**，并应在代码审查中主动拦截此类伪需求。
 5. 数值类规范（对比度、触控目标、动效时长）以 principles 层与 languages 层的表为准，注明快照日期；引用时保留日期。
 
-## 三大判断场景的推荐路径
+## 三大判断场景的推荐落地路径（实体 Playbooks）
 
-- **design review**：patterns（定产品类型与反模式）→ heuristics-wcag（走查问句 + 硬数字）→ lawsofux（根因归因）
-- **style refactor**：design-languages（选参照体系，进 L0 官方站取规范）→ patterns（校验产品类型不冲突）
-- **professional critique**：design-process（五层/双钻提问顺序）→ design-books（四问框架）→ 跨体系 7 共性作检查维度
+本站已将三大判断场景实体化为可直接执行的指南：
+
+- **场景 A：设计走查（design review）** → 直接载入 [docs/workflows/design-review.md](docs/workflows/design-review.md)（产品类型约束 → WCAG 2.2 AA 硬红线拦截 → Nielsen 十启发式走查 → 心理学定律归因）。
+- **场景 B：风格重构（style refactor）** → 直接载入 [docs/workflows/style-refactor.md](docs/workflows/style-refactor.md)（设计系统选型决策树 → DTCG 三层 Token 架构 → 组件状态迁移 → 明暗与无障碍复核）。
+- **场景 C：专业审视（professional critique）** → 直接载入 [docs/workflows/professional-critique.md](docs/workflows/professional-critique.md)（Garrett 五层自底向上提问阶梯 → 四问心智模型 → 跨体系 7 条共性检查维度）。
+
+## 架构与基石索引
+
+- **信息架构（IA）**：[docs/foundations/information-architecture.md](docs/foundations/information-architecture.md)（北极熊书四大系统、Dan Brown 八原则、Abby Covert 三元模型、Diátaxis 框架、卡片分类与树测试）。
+- **视觉组织法则**：[docs/principles/gestalt.md](docs/principles/gestalt.md)（格式塔 5 大经典原则 + 5 大现代扩展原则）。
+- **工程设计及格线**：[docs/foundations/quickstart.md](docs/foundations/quickstart.md)（8pt 间距系统、三级灰阶、CRAP 原则极简代码实战）。
+- **屏幕度量衡**：[docs/foundations/concept-unit.md](docs/foundations/concept-unit.md)（px/rem/dp/epx 跨平台对账）。
 
 ## 如何贡献内容
 
-放置规则（哪类内容进哪层）见 README.md「维护与扩展约定」。硬性纪律：
+放置规则见 README.md「维护与扩展约定」。硬性纪律：
 
 - **无空壳**：不建没有首个真实文件的目录；未完成主题放 `_draft/`
 - **时效标注**：版本/状态/数值必须带取用日期；hub 类条目必须先做 HTTP 实证再收录，失效即进证伪清单

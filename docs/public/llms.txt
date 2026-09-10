@@ -1,26 +1,41 @@
 # Learn Design
 
-> 体系化设计认知知识库：面向 agent 与工程师的设计判断层。不做权威规范拷贝，沉淀跨信源综合的共性、可执行硬数字与已验证信源地图。快照日期 2026-09-02。
+> 体系化设计认知知识库：面向 Agent 与工程师的设计判断层。不做权威规范拷贝，沉淀跨信源综合的共性、可执行硬数字、已验证信源地图与已证伪教条。快照基准日期 2026-09-10。
 
-## 知识地图（六层认知管线）
+## 知识地图（两轨四柱架构）
 
-- [首页 / 知识地图](https://design.zenheart.site/)：六层框架、三类判断场景工作流、引用纪律
-- [经典设计书籍共性提炼](https://design.zenheart.site/books/design-books)：9 本经典 → 四层认知模型，含微信读书热门划线证据
-- [UX 设计法则（26 条）](https://design.zenheart.site/principles/lawsofux)：lawsofux.com 全量中文沉淀，六类分组，每条含 BAD/GOOD 对比与设计应用
-- [可用性启发式与无障碍基线](https://design.zenheart.site/principles/heuristics-wcag)：Nielsen 十启发式走查问句 + WCAG 2.2 硬数字
+### 实战任务轨（Playbooks）
+- [首页 / 知识地图](https://design.zenheart.site/)：两轨四柱架构全景、三大判断场景工作流与引用纪律
+- [场景 A：设计走查体检表](https://design.zenheart.site/workflows/design-review)：代码合入与上线前 10 分钟自查，WCAG 2.2 AA 硬红线 + Nielsen 启发式走查
+- [场景 B：风格选型与重构指南](https://design.zenheart.site/workflows/style-refactor)：主流设计系统选型决策树、DTCG 三层 Token 架构与四步重构实战
+- [场景 C：专业设计审视框架](https://design.zenheart.site/workflows/professional-critique)：Garrett 五层提问阶梯、四问心智模型与跨体系 7 条共性审查
+
+### 基础认知（Foundations）
+- [工程师设计及格线（15分钟上手）](https://design.zenheart.site/foundations/quickstart)：8pt 间距系统、三级灰阶、CRAP 四原则极简代码实战与交互五态
+- [信息架构核心体系（IA 全景）](https://design.zenheart.site/foundations/information-architecture)：北极熊书四大系统、Dan Brown 八原则、Abby Covert 模型、Diátaxis 四象限与卡片分类
+- [经典设计书籍共性提炼](https://design.zenheart.site/books/design-books)：9 本经典 → 四层认知模型（心理/原则/流程/体验），含微信读书热门划线证据
+- [UI/UX 核心术语速查表](https://design.zenheart.site/foundations/term)：Affordance、Signifier、Mental Model、Design Token、A11y 等 20+ 核心概念对账
+- [数字界面度量衡（屏幕单位全解）](https://design.zenheart.site/foundations/concept-unit)：物理/逻辑像素、DPR 视网膜渲染、跨平台单位对账（px/rem/pt/dp/epx）与流体排版
+- [从印刷出血到现代屏幕安全区](https://design.zenheart.site/foundations/concept-bleeding)：印刷机械公差出血、Web 全出血布局、移动端异形屏 Safe Area 与视口环境避让
+
+### 法则与规范（Principles）
+- [UX 设计法则（26 条全量）](https://design.zenheart.site/principles/lawsofux)：lawsofux.com 全量中文沉淀，六类分组，每条含 BAD/GOOD 对比与设计应用
+- [可用性启发式与 WCAG 基线](https://design.zenheart.site/principles/heuristics-wcag)：Nielsen 十大启发式走查问句 + WCAG 2.2 AA 刚性数字（4.5:1 / 24px）
+- [格式塔知觉组织原则（10 大法则）](https://design.zenheart.site/principles/gestalt)：5 大经典原则（接近/相似/连续/闭合/图底）+ 5 大现代扩展（共同区域/连通性等）
+- [已证伪设计教条深度考据](https://design.zenheart.site/principles/falsified-dogmas)：三次点击法则、首屏折叠迷思、米勒定律 7±2 误读的科学证伪铁证
+
+### 流程、语言与模式（Process, Languages & Patterns）
 - [设计工作流与流程体系](https://design.zenheart.site/process/design-process)：双钻 / Design Sprint / IBM EDT / Lean UX 对照 + 跨体系 7 共性
-- [主流设计语言索引](https://design.zenheart.site/languages/design-languages)：Material 3 / HIG / Fluent 2 / Ant Design v6 等官方索引与借鉴点
-- [产品类型设计约束矩阵](https://design.zenheart.site/patterns/product-patterns)：七类产品约束 + 跨类型共识 + 三条已证伪教条
+- [主流设计语言索引与借鉴点](https://design.zenheart.site/languages/design-languages)：Material 3 Expressive / Apple HIG / Fluent 2 / Ant Design v6 等官方索引与深度借鉴点
+- [产品类型设计约束矩阵](https://design.zenheart.site/patterns/product-patterns)：SaaS 仪表盘、AI Agent（微软 HAX + Google PAIR）、电商与移动端约束矩阵
 
-## Hubs（持续追踪层）
-
-- [设计师 Hub](https://design.zenheart.site/resources/hubs-designers)：14 位设计师与学者，站点全部实证可达
-- [灵感资源 Hub](https://design.zenheart.site/resources/hubs-inspiration)：真实产品 / 流程 / 落地页 / 作品集灵感站点
+### 资源生态 Hubs（持续追踪层）
+- [工具与效能 Hub](https://design.zenheart.site/resources/hubs-tools)：UI 协作 / 原型 / 白板 / 图标 / 字体 / 交接 / AI 工具（42 站 HTTP 实证 + 死亡名单）
+- [灵感资源 Hub](https://design.zenheart.site/resources/hubs-inspiration)：真实产品流 / 流程 / 落地页 / 作品集灵感站点
 - [学习索引 Hub](https://design.zenheart.site/resources/hubs-learning)：研究文章 / 法则速查 / 设计系统索引 / 中文排版规范
-- [工具 Hub](https://design.zenheart.site/resources/hubs-tools)：UI 协作 / 原型 / 白板 / 图标 / 字体 / 交接 / AI 工具，含改名关停证伪清单
+- [设计师 Hub](https://design.zenheart.site/resources/hubs-designers)：14 位大师与学者主页（全部实证可达）
 
-## Agent 使用要点
-
-- 引用规则：事实性论断带来源层级（L0 官方 / L2 行业 / E 实证）与取用日期；厂商自测数据标"声称"
-- 已证伪教条（三次点击法则、"必须全放首屏"、7±2 菜单上限）不作为批评依据
-- 站点更新规则与放置约定见仓库根 AGENTS.md 与 README.md
+## Agent 消费与审查契约
+- 引用规则：事实性论断必须标注信源层级（L0 官方 / L2 行业 / L4 著作 / E 实证）与取用日期；厂商自测数据标“声称”
+- 已证伪教条（三次点击法则、“必须全放首屏”、7±2 菜单上限）在评审时主动降权驳回
+- 站点维护约定与扩展规则详见仓库根 AGENTS.md 与 README.md

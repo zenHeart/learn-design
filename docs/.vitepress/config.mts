@@ -1,62 +1,85 @@
 import { defineConfig } from 'vitepress'
 
-// 知识地图与 README.md 保持一致：六层认知管线
+// 知识架构：两轨四柱（实战任务轨 + 知识基座轨）
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Learn Design',
-  description: '体系化设计认知知识库：法则、启发式、流程、设计语言、产品模式与三类 hub 地图',
+  description: '面向 Agent 与工程师的设计判断层知识库：实战工作流、基础认知、法则规范、产品模式与资源地图',
   srcExclude: ['_draft/**'],
   head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   themeConfig: {
     siteTitle: 'Learn Design',
     nav: [
       { text: '知识地图', link: '/' },
-      { text: '法则', link: '/principles/lawsofux' },
-      { text: 'Hub', link: '/resources/hubs-designers' },
+      { text: '实战工作流', link: '/workflows/design-review' },
+      { text: '基础认知', link: '/foundations/quickstart' },
+      { text: '法则与规范', link: '/principles/lawsofux' },
+      { text: '产品模式', link: '/patterns/product-patterns' },
+      { text: '设计系统', link: '/languages/design-languages' },
+      { text: '资源 Hubs', link: '/resources/hubs-tools' },
       { text: 'GitHub', link: 'https://github.com/zenHeart/learn-design' }
     ],
     sidebar: [
       {
-        text: '① 认知入口',
+        text: '🛠️ 实战工作流 (Playbooks)',
         collapsed: false,
         items: [
-          { text: '经典书籍共性提炼', link: '/books/design-books' },
-          { text: '术语', link: '/foundations/term' },
-          { text: '设计单位', link: '/foundations/concept-unit' },
-          { text: '出血 Bleed', link: '/foundations/concept-bleeding' }
+          { text: '场景 A：设计走查体检表', link: '/workflows/design-review' },
+          { text: '场景 B：风格选型与重构指南', link: '/workflows/style-refactor' },
+          { text: '场景 C：专业设计审视框架', link: '/workflows/professional-critique' }
         ]
       },
       {
-        text: '② 判断依据',
+        text: '📚 基础认知 (Foundations)',
         collapsed: false,
         items: [
-          { text: 'UX 设计法则（26 条）', link: '/principles/lawsofux' },
-          { text: '启发式与 WCAG 基线', link: '/principles/heuristics-wcag' }
+          { text: '工程师设计及格线 (新手15分钟)', link: '/foundations/quickstart' },
+          { text: '信息架构核心体系 (IA 全景)', link: '/foundations/information-architecture' },
+          { text: '经典设计书籍共性提炼', link: '/books/design-books' },
+          { text: 'UI/UX 核心术语速查表', link: '/foundations/term' },
+          { text: '数字界面度量衡 (屏幕单位全解)', link: '/foundations/concept-unit' },
+          { text: '从印刷出血到现代安全区', link: '/foundations/concept-bleeding' }
         ]
       },
       {
-        text: '③ 方法流程',
-        collapsed: false,
-        items: [{ text: '设计工作流与流程体系', link: '/process/design-process' }]
-      },
-      {
-        text: '④ 参照体系',
-        collapsed: false,
-        items: [{ text: '主流设计语言索引', link: '/languages/design-languages' }]
-      },
-      {
-        text: '⑤ 场景落地',
-        collapsed: false,
-        items: [{ text: '产品类型约束矩阵', link: '/patterns/product-patterns' }]
-      },
-      {
-        text: '⑥ 持续追踪 · Hubs',
+        text: '⚖️ 法则与合规基线 (Principles)',
         collapsed: false,
         items: [
-          { text: '设计师 Hub', link: '/resources/hubs-designers' },
+          { text: 'UX 设计法则 (26 条全量)', link: '/principles/lawsofux' },
+          { text: '可用性启发式与 WCAG 基线', link: '/principles/heuristics-wcag' },
+          { text: '格式塔知觉组织原则 (10 大法则)', link: '/principles/gestalt' },
+          { text: '已证伪设计教条深度考据', link: '/principles/falsified-dogmas' }
+        ]
+      },
+      {
+        text: '🔄 方法与流程 (Process)',
+        collapsed: false,
+        items: [
+          { text: '设计工作流与流程体系', link: '/process/design-process' }
+        ]
+      },
+      {
+        text: '🏛️ 设计系统与语言 (Languages)',
+        collapsed: false,
+        items: [
+          { text: '主流设计语言索引与借鉴点', link: '/languages/design-languages' }
+        ]
+      },
+      {
+        text: '📐 产品模式与约束 (Patterns)',
+        collapsed: false,
+        items: [
+          { text: '产品类型设计约束矩阵', link: '/patterns/product-patterns' }
+        ]
+      },
+      {
+        text: '🧭 资源生态 (Resource Hubs)',
+        collapsed: false,
+        items: [
+          { text: '工具与效能 Hub', link: '/resources/hubs-tools' },
           { text: '灵感资源 Hub', link: '/resources/hubs-inspiration' },
           { text: '学习索引 Hub', link: '/resources/hubs-learning' },
-          { text: '工具 Hub', link: '/resources/hubs-tools' }
+          { text: '设计师 Hub', link: '/resources/hubs-designers' }
         ]
       }
     ],
@@ -64,7 +87,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/zenHeart/learn-design' }],
     search: { provider: 'local' },
     footer: {
-      message: '面向 agent 与工程师的设计判断层知识库',
+      message: '面向 Agent 与工程师的设计判断层知识库',
       copyright: 'zenHeart'
     }
   }
