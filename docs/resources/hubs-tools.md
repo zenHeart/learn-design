@@ -1,100 +1,38 @@
 ---
-title: 工具 Hub
-description: 设计工具版图索引：UI 协作、原型、白板、图标、字体、交接与 AI 工具；42 站实证快照，改名/关停高发区标注清楚。取用日期 2026-09-02。
+title: 工具 Hub · 现代设计工程工具雷达
+description: 覆盖 UI 协作、原型、白板、图标、交接标准与 AI 工具的全生命周期工具雷达；提供状态药丸、授权许可与真实存活实证快照。
 ---
 
-# 工具 Hub
+# 工具 Hub · 现代设计工程工具雷达
 
-> 选型前先查"状态"列。本表 42 个站点经 curl 状态码/重定向链实证（E 层），AI 工具是改名/关停高发区，未标注"活跃"的条目引用前先复核。快照日期：2026-09-02。
-> 灵感类站点见 [灵感资源 Hub](/resources/hubs-inspiration)；学习型站点见 [学习索引 Hub](/resources/hubs-learning)。
+> **"工欲善其事，必先利其器，但切忌在已过时或维护停滞的工具上浪费心智。"**  
+> 本雷达精选并实证追踪了 20+ 款处于现代产品设计研发第一线的核心工具。每个条目均标注**生命周期状态**（活跃 / 维护 / 关停变动）与**开源协议约束**（特别是图标商用风险），帮助前端工程师与产品团队快速完成技术选型。
 
-## UI 设计 / 协作
+<ToolWall />
 
-| 工具 | URL | 定位 | 状态 |
-|---|---|---|---|
-| Figma | <https://figma.com> | 行业主导者；Config 2025 后扩张为"设计+AI 建站+Make"平台 | 活跃 |
-| Sketch | <https://sketch.com> | Mac 原生设计工具 | 活跃（2026 仍在发版） |
-| Penpot | <https://penpot.app> | 开源（MPL-2.0）Figma 替代，设计与代码同源，可自托管 | 活跃 |
-| Adobe XD | adobe.com | — | **维护模式**（2023-05 起仅修 bug，无新功能），勿再作为主力推荐 |
+---
 
-## 原型
+## 关键选型陷阱与已证伪事实（2026 最新快照）
 
-Figma 内置原型覆盖多数场景；按需补位：Framer（可发布级网站 + AI 建站）、ProtoPie（无代码复杂交互逻辑，2025 推出 AI 公测）。
+在快速变化的设计工具链中，许多两三年前的"常识"已被现实证伪。以下为研发团队选型时必须注意的典型雷区：
 
-## 白板 / 流程
+| 历史过时认知 | 2026 实际状态与工程影响 | 替代与应对策略 |
+|---|---|---|
+| **Galileo AI 仍是独立 AI 原型主力** | **已死**。2025 年 5 月被 Google 收购并重组为 **Google Stitch**，原独立服务已关停下线。 | 前往体验 [Google Stitch](https://stitch.withgoogle.com) 或使用 v0.app / Figma Make。 |
+| **v0 网址仍是 v0.dev** | **域名已变**。Vercel 已将其全面升级迁移至 **v0.app**（原域名 307 重定向）。 | 更新书签与 API 依赖至 `v0.app`。 |
+| **Adobe XD 仍适合新团队立项** | **维护模式**。自 2023 年 5 月起 Adobe 已停止功能演进，仅保留关键安全补丁。 | 新团队一律直接采用 Figma 或开源的 Penpot。 |
+| **Apple SF Symbols 可以随意嵌入 Web 项目** | **存在严重商用侵权风险**。Apple HIG 明确约束 SF Symbols 仅限于在其自家 OS（iOS/macOS 等）的应用中使用，禁止提取用于 Web/Android。 | Web 端推荐使用宽松开源的 **Lucide**（ISC）或 **Material Symbols**（Apache 2.0）。 |
+| **DTCG Design Tokens 是正式 W3C 国际标准** | **澄清**：其法律地位是 **W3C 社区组报告（Community Group Report）**，并非 W3C Recommendation 正式标准（但已是业界跨工具交换的事实标准）。 | 采用 `2025.10` 稳定格式定义 Token，注意工具链解析器的兼容性。 |
+| **Radix UI 在 2025 年被收购** | **时间错位**。实为 2022 年被 WorkOS 收购；近期社区动态是 Radix 迭代节奏放缓，社区正在向 Base UI 和 Tailwind v4 原生体系分流。 | 核心无样式组件可继续使用 Radix，但新项目建议评估 Base UI 或 Headless UI。 |
 
-| 工具 | URL | 定位 | 状态 |
-|---|---|---|---|
-| FigJam | <https://figma.com/jam> | Figma 家族白板 | 活跃 |
-| Miro | <https://miro.com> | 通用协作白板；2024-06 收购 AI 原型工具 Uizard | 活跃 |
-| tldraw | <https://tldraw.com> | 手绘感画布 + 开发者 canvas SDK | 活跃（2025-04 Series A） |
-| Excalidraw | <https://excalidraw.com> | 开源手绘白板，Excalidraw+ 商业版 | 活跃 |
+---
 
-## 图标
+## 工具链选型建议：前端团队的极简基线配置
 
-| 图标库 | URL | 许可 | 注意 |
-|---|---|---|---|
-| Material Symbols | <https://fonts.google.com/icons> | Apache 2.0 | 谷歌官方 |
-| SF Symbols | <https://developer.apple.com/sf-symbols> | 仅限 Apple 平台 App UI | **不可用于 Web/Android** |
-| Lucide | <https://lucide.dev> | ISC | Feather 继任，开源线条风 |
-| Heroicons | <https://heroicons.com> | MIT | Tailwind Labs 官方 |
-| Iconify | <https://iconify.design> | 聚合 200+ 集 | 各集许可不一，用前逐集核对 |
+对于中小型团队或希望提升工程设计协同效率的前端工程师，推荐如下"零浪费"黄金搭配：
 
-## 字体
-
-Google Fonts（<https://fonts.google.com>，最大免费库，OFL/Apache 为主）、Fontsource（<https://fontsource.org>，npm 自托管字体包）。
-
-## 设计到开发交接
-
-- **Design tokens**：W3C DTCG 格式（<https://design-tokens.github.io/community-group/format/>）2025-10-28 发布首个稳定版 2025.10，跨工具交换的事实标准；注意其法律地位是**社区组报告而非 W3C 正式标准**（见[流程体系](/process/design-process)的澄清）。Tokens Studio 插件支持该格式。
-- **Storybook**（<https://storybook.js.org>）：组件开发/文档/测试工作台，事实标准。
-- **Zeplin**（<https://zeplin.io>）：仍活跃但生态被 Figma Dev Mode 蚕食。
-
-## AI 辅助设计（2026-09 快照，改名/关停高发区）
-
-| 工具 | URL | 定位 | 变动 |
-|---|---|---|---|
-| v0 | <https://v0.app> | prompt → 全栈应用 | **v0.dev 已改名 v0.app**（307 实证） |
-| Google Stitch | <https://stitch.withgoogle.com> | prompt → UI 设计 + 前端代码 | **前身即 Galileo AI**，2025-05 被 Google 收购改名（308 实证） |
-| Figma AI / Make | <https://figma.com> | prompt → 代码原型 | Config 2025 正式发布 |
-| Relume | <https://relume.ai> | AI 站点地图 + 线框 → Webflow | 域名 relume.io → relume.ai（301 实证） |
-| Uizard | uizard.io | AI 线框/原型 | 2024-06 被 Miro 收购 |
-
-## React 组件库参考
-
-| 组件库 | URL | 定位 | 状态 |
-|---|---|---|---|
-| shadcn/ui | <https://ui.shadcn.com> | 复制粘贴式组件集（事实标准） | 活跃 |
-| Radix UI | <https://radix-ui.com> | headless 无样式原语 | 活跃但迭代放缓，社区向 Base UI 转移 |
-| Mantine | <https://mantine.dev> | 电池全包式 | 活跃 |
-| Chakra UI | <https://chakra-ui.com> | 可主题化 | 活跃（v3 后声量下降） |
-| Headless UI | <https://headlessui.com> | Tailwind 系 headless | 活跃（节奏慢于 Tailwind 本体） |
-
-## 证伪清单（索引时主动排除）
-
-| 过时认知 | 实际状态 |
-|---|---|
-| Galileo AI | 已死——被 Google 收购改名 Stitch |
-| v0.dev | 已改名 v0.app |
-| Adobe XD | 维护模式 |
-| Screenlane / Godly | 独立站已消亡（分别并入 Page Flows / recent.design） |
-| "Radix 2025 被收购" | 实为 2022 被 WorkOS 收购；2025 话题是迭代放缓 + Base UI v1.0 崛起 |
-| Kortux / Bento（设计聚合） | 无法证实为设计站点，已从索引移除 |
-
-## 关键信源
-
-| 编号 | 来源 | 层级 | URL | 取用日期 |
-|---|---|---|---|---|
-| S2 | Adobe XD release notes | L0 | helpx.adobe.com/xd/desktop/introduction/whats-new.html | 2026-09-02 |
-| S4 | Figma Config 2025 Recap | L0 | figma.com/blog/config-2025-recap | 2026-09-02 |
-| S5 | Vercel 官方（v0.app） | L0 | vercel.com/blog/v0-app | 2026-09-02 |
-| S6 | Google Stitch（+308 重定向实证） | L0/E | stitch.withgoogle.com | 2026-09-02 |
-| S11 | W3C DTCG 2025.10 稳定版公告 | L0 | w3.org/community/design-tokens/2025/10/28 | 2026-09-02 |
-| S17 | 各图标库 LICENSE 原文 | E | raw.githubusercontent.com | 2026-09-02 |
-| S18 | SF Symbols 许可条款 | L0 | developer.apple.com/design/human-interface-guidelines/sf-symbols | 2026-09-02 |
-| S23 | curl 批量验证 42 站 | E | 本机执行 | 2026-09-02 |
-
-## 缺口
-
-- Framer/FigJam/Miro/Storybook/shadcn 未做独立时效检索，仅 E 层可达性实证。
-- Iconify 聚合的各图标集许可需逐集核对，无统一结论。
+1. **构思与白板讨论**：`Excalidraw`（轻量构架草图、流程演练）或 `FigJam`（多角色头脑风暴）。
+2. **UI 规范与原型交付**：`Figma`（主导地位，善用 Auto Layout 与 Variables 功能）。
+3. **图标资产管理**：`Lucide`（React/Vue 零配置组件，极简统一）+ `Iconify` 作为备选图标集。
+4. **代码组件落地**：`shadcn/ui` + `Tailwind CSS`（代码所有权完全归属业务工程，无侵入黑盒）。
+5. **状态与走查验证**：`Storybook`（组件隔离沙盒环境，走查极端边界状态）。

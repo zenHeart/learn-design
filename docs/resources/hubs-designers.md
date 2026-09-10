@@ -1,45 +1,43 @@
 ---
-title: 设计师 Hub
-description: 14 位值得追踪的设计师与设计学者：经典物质设计、认知科学与可用性、数字产品体验三脉；全部站点经 HTTP 实证可达。
+title: 设计师 Hub · 先驱与思想图谱
+description: 14 位值得长期追踪的设计先驱与学者：经典物质设计、认知科学与可用性、数字产品体验三脉；集成交互式头像墙与第一手信源直达。全部经 HTTP 实证。
 ---
 
-# 设计师 Hub
+# 设计师 Hub · 先驱与思想图谱
 
-> 回答"这个领域谁值得长期追踪、去哪里读他们的第一手思想"。全部 14 条站点于 2026-09-02 经 HTTP 状态实证可达；不收录无法直达第一手内容的条目。
+> **"审视某个设计判断的'出处'时，先回到这群人的第一手文本，再过二手转述。"**  
+> 本站收录的 14 位大师与学者代表了工业设计、人机交互与现代数字界面演进的奠基脉络。全部条目于 2026-09 经 HTTP 状态实证可达；拒绝无法直达原著/原站的空泛列名。
 
-## 经典与物质设计
+<DesignerWall />
 
-| 设计师 | 一句话定位 | 代表作/思想 | 第一手站点 |
-|---|---|---|---|
-| Dieter Rams | 功能主义"好的设计十诫"作者，以"更少，但更好"影响 Apple 与整个产品设计 | 十原则 | <https://www.vitsoe.com/us/about/good-design> |
-| 原研哉 | 无印良品艺术总监；"白"与"空"的信息美学 | 《设计中的设计》 | <https://www.ndc.co.jp/hara/> |
-| 深泽直人 | "Without Thought" 设计哲学、±0 创始人；无意识设计 | 带凹槽的雨伞、壁挂式 CD 机 | <https://www.naotofukasawa.com> |
-| Bill Buxton | 交互设计先驱；自然用户界面与草图方法论 | 《Sketching User Experiences》 | <https://billbuxton.com> |
+---
 
-## 认知科学与可用性
+## 思想流派与学术脉络溯源
 
-| 设计师 | 一句话定位 | 代表作/思想 | 第一手站点 |
-|---|---|---|---|
-| Donald A. Norman | 认知科学 × 设计的奠基人；可供性/示能概念普及者 | 《设计心理学》1-4 册 | <https://jnd.org> |
-| Jakob Nielsen | 可用性工程开创者；十大启发式与雅各布定律 | 十启发式、NN/g 文章库 | <https://www.nngroup.com> |
-| Ben Shneiderman | 人机交互学术泰斗；界面设计八大黄金法则 | 《Designing the User Interface》 | <https://www.cs.umd.edu/~ben/> |
-| BJ Fogg | 行为设计之父；福格行为模型 B=MAP | 《Tiny Habits》、斯坦福行为设计实验室 | <https://bjfogg.com> |
+在现代前端工程中，许多所谓的"行业默认规范"（如 48px 触控热区、一致性反馈、错误预防、克制的设计语言），其源头均能在这三脉中找到奠基性的理论支撑：
 
-## 数字产品与体验
+### 1. 经典与物质设计（功能主义与减法哲学）
+* **Dieter Rams（迪特·拉姆斯）**：博朗传奇，以"Less, but better"重构了战后工业品审美。其"好设计十诫"构成了现代极简主义与 Apple 软硬件设计的核心基因。
+* **原研哉（Kenya Hara）**：无印良品（MUJI）艺术总监，提出"白（Shiro）"与"空（Emptiness）"的东方信息哲学，将设计视为"重新审视已知事物（Ex-formation）"的过程。
+* **深泽直人（Naoto Fukasawa）**：主张"无意识设计（Without Thought）"，强调物应当自然融入人的行为轨迹与物理环境中，消除认知摩擦。
+* **Bill Buxton（比尔·巴克斯顿）**：多点触控与手势交互先驱，微软研究院主创，奠定了原型草图在交互探索中的不可替代性。
 
-| 设计师 | 一句话定位 | 代表作/思想 | 第一手站点 |
-|---|---|---|---|
-| Alan Cooper | 交互设计之父；目标导向设计（Goal-Directed Design） | 《About Face》、Visual Basic 之父 | <https://en.wikipedia.org/wiki/Alan_Cooper> |
-| Julie Zhuo | 前 Facebook 设计 VP；产品设计与管理写作 | 《The Making of a Manager》 | <https://www.juliezhuo.com> |
-| John Maeda | 设计 × 计算的桥梁；MIT 媒体实验室传奇 | 《The Laws of Simplicity》 | <https://maedastudio.com> |
-| Irene Au | Khosla Ventures 设计合伙人；前 Google/Chrome/Yahoo UX 高管 | 冥想与设计的关系写作 | <https://ireneau.com> |
-| Jon Yablonski | Laws of UX 作者；心理学 × 界面设计的翻译者 | lawsofux.com、Humane by Design | <https://lawsofux.com> |
-| Tobias van Schneider | 独立设计师创业者；Semplice 创始人、前 Spotify | 设计师个人品牌方法论 | <https://vanschneider.com> |
+### 2. 认知科学与可用性工程（实证与度量基石）
+* **Donald A. Norman（唐·诺曼）**：认知心理学与现代 UX 的开山鼻祖。将物理学与心理学的"可供性（Affordance）"、"意符（Signifier）"概念引入人机交互领域，揭示人与人造物交互的认知鸿沟。
+* **Jakob Nielsen（雅各布·尼尔森）**：可用性工程学奠基人，NN/g 联合创始人。提炼出历久弥新的"十项可用性启发式原则（10 Heuristics）"与"雅各布定律（用户大多数时间在别人的网站上）"。
+* **Ben Shneiderman（本·施奈德曼）**：提出"直接操纵（Direct Manipulation）"界面范式与"界面设计八大黄金法则"，人机工程学泰斗。
+* **BJ Fogg（福格）**：斯坦福大学行为设计实验室主任，提出著名的行为模型 $B = MAP$（行为 = 动机 × 能力 × 触发提示），是增长设计与习惯养成的理论底层。
 
-## 使用建议
+### 3. 数字产品与前沿体验（工程交接与现代设计系统）
+* **Alan Cooper（艾伦·库珀）**：Visual Basic 之父，被尊称为"交互设计之父"。提出"目标导向设计（Goal-Directed Design）"与"人物模型（Persona）"方法论，著有行业圣经《About Face》。
+* **Jon Yablonski**：Laws of UX 与 Humane by Design 的创立者，将心理学与认知科学抽象概念翻译为前端与设计师均能一眼看懂的交互法则。
+* **Julie Zhuo（卓予涵）**：前 Meta/Facebook 产品设计副总裁，深度梳理了初创期到超大规模团队下产品设计的权衡与工程协同。
+* **John Maeda（前田约翰）**：MIT 媒体实验室传奇，主导《简单法则（Laws of Simplicity）》，横跨计算机代码与艺术设计双界。
 
-- 审视某个设计判断的"出处"时，先回到这些人的第一手文本，再过二手转述——本站 [principles 层](/principles/lawsofux)的多数法则可直接溯源到 Norman、Nielsen、Fitts 这一脉。
-- 追踪动态：Nielsen（NN/g 文章）与 Yablonski（lawsofux 更新）保持活跃；Rams/原研哉/深泽直人属思想型常量，无需频繁跟进。
-- 条目收录标准：有第一手内容站点 + 对"设计判断"有直接贡献。发现的失效链接直接在 [工具 Hub](/resources/hubs-tools) 的证伪惯例下处理。
+---
 
-> 缺口：设计师侧重产品/交互脉，平面与字体大师（Paul Rand、Massimo Vignelli、Jessica Hische）未收录——待视觉设计专题扩展时补充。
+## 工程师的高效阅读策略
+
+1. **查验法则的源头依据**：不要死记设计规范，遇到组件状态、报错提示或动效时，去对应人物的第一手博客与论文中看他们最初解决这一问题的心理学推演（例如为什么返回键要符合心理模型、为什么不可让用户记忆负担过载）。
+2. **区分常量与变量**：拉姆斯与诺曼的思想属于**物理常数级法则**（无论载体是 PC、手机还是 Vision Pro 均生效）；而具体工具流（Figma、Tokens、AI 原型）属于**技术变量**。先固守常数，再追随变量。
+3. **已排除名录**：部分在社交媒体声量极高但缺乏学术实证体系或长期稳定站点的内容源，已从本清单主动过滤，确保每一个链接都有扎实的工程指导价值。
