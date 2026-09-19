@@ -1,0 +1,656 @@
+{
+  "schema_version": 1,
+  "local_series": "learn-design",
+  "capabilities": [
+    {
+      "id": "color-theory",
+      "title": "色彩理论与可访问色板工程",
+      "outcome": "用 OKLCH 构建感知均匀色板，通过 WCAG AA 对比度审计，输出浅色与暗色双模式语义化 Token"
+    },
+    {
+      "id": "typography",
+      "title": "字体排印与中西文协同",
+      "outcome": "选择字体栈、Type Scale、行高与行长，输出 5 档字重阶梯并处理中英文混排"
+    },
+    {
+      "id": "grid-layout",
+      "title": "网格与响应式布局",
+      "outcome": "用 8pt 模数与断点表实现 12 栏网格，区分 CSS Grid 与 Flexbox 取舍，落地 Container Queries"
+    },
+    {
+      "id": "visual-hierarchy",
+      "title": "视觉层次与阅读路径",
+      "outcome": "用大小/颜色/粗细/空间四要素建立三级文字层级，按 F/Z/Gutenberg 模式引导焦点"
+    },
+    {
+      "id": "consistency",
+      "title": "一致性与设计语言稳定性",
+      "outcome": "按雅各布定律保持交互一致，识别组件 / 状态 / 文案三层不一致并修复"
+    },
+    {
+      "id": "design-system",
+      "title": "设计系统三层架构与 DTCG 落地",
+      "outcome": "构建 Token / Pattern / Component 三层，输出符合 W3C DTCG 规范的 JSON Token"
+    },
+    {
+      "id": "visual-perception",
+      "title": "视觉感知与认知负荷",
+      "outcome": "用格式塔原则解释分组与层次，按 Laws of UX 心理学定律归因界面问题"
+    },
+    {
+      "id": "component-library",
+      "title": "组件库与状态完备性",
+      "outcome": "为每个交互组件补全 5 态（default/hover/active/focus-visible/disabled）并用 Storybook 文档化"
+    },
+    {
+      "id": "accessibility-wcag",
+      "title": "无障碍设计与 WCAG 2.2",
+      "outcome": "复述 POUR 四大原则与硬数字，实现键盘导航、ARIA 与屏幕阅读器可达性"
+    },
+    {
+      "id": "information-architecture",
+      "title": "信息架构与导航",
+      "outcome": "用 Dan Brown 八原则与卡片分类组织信息结构，设计导航 IA 与树测试验证"
+    },
+    {
+      "id": "micro-interaction",
+      "title": "微交互与状态反馈",
+      "outcome": "实现多赫蒂阈值内的即时反馈、骨架屏与过渡动效，并尊重 prefers-reduced-motion"
+    },
+    {
+      "id": "dark-mode",
+      "title": "暗色模式与 OKLCH 颜色映射",
+      "outcome": "用 prefers-color-scheme 与 OKLCH 实现系统跟随 + 手动切换的暗色模式，并处理阴影与图像适配"
+    },
+    {
+      "id": "design-tokens",
+      "title": "设计 Token 与三层架构",
+      "outcome": "构建 global / alias / component 三层 Token，用 Style Dictionary 多平台同步"
+    },
+    {
+      "id": "design-review",
+      "title": "设计评审与协作礼仪",
+      "outcome": "执行 Stakeholder / Peer / Heuristic 三种评审，输出可执行修复清单并闭环至 style-refactor"
+    }
+  ],
+  "series": [
+    {
+      "id": "learn-design",
+      "title": "面向工程师的设计工程与判断层知识库",
+      "repository": "https://github.com/zenHeart/learn-design",
+      "revision": "cb828a68f286bb7a2baffcda7131816140b16a5c",
+      "entry": "README.md",
+      "capability_refs": [
+        "color-theory",
+        "typography",
+        "grid-layout",
+        "visual-hierarchy",
+        "consistency",
+        "design-system",
+        "visual-perception",
+        "component-library",
+        "accessibility-wcag",
+        "information-architecture",
+        "micro-interaction",
+        "dark-mode",
+        "design-tokens",
+        "design-review"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "locator": "1.4.3, 1.4.11, 2.4.11, 2.5.7, 2.5.8",
+      "accessed_at": "2026-09-20",
+      "scope": "WCAG 2.2 文本与非文本对比度、焦点可见性、目标尺寸硬指标"
+    },
+    {
+      "id": "S2",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch",
+      "locator": "oklch() — perceptual lightness, chroma, hue",
+      "accessed_at": "2026-09-20",
+      "scope": "OKLCH 感知均匀色彩空间的工程语法与浏览器支持"
+    },
+    {
+      "id": "S3",
+      "url": "https://www.w3.org/TR/css-color-4/",
+      "locator": "Color Module Level 4 — oklab/oklch/hsl",
+      "accessed_at": "2026-09-20",
+      "scope": "CSS 颜色模块规范与色空间定义"
+    },
+    {
+      "id": "S4",
+      "url": "https://m3.material.io/styles/color/",
+      "locator": "Color system — primary/secondary/tertiary containers, tonal palettes",
+      "accessed_at": "2026-09-20",
+      "scope": "Material Design 3 动态色彩与暗色模式映射公式"
+    },
+    {
+      "id": "S5",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/dark-mode",
+      "locator": "Dark Mode — colors, elevation, images",
+      "accessed_at": "2026-09-20",
+      "scope": "Apple HIG 暗色模式指导，避免纯黑底、阴影替代与图像适配"
+    },
+    {
+      "id": "S6",
+      "url": "https://www.myndex.com/APCA/",
+      "locator": "Accessible Perceptual Contrast Algorithm — Lc / Lc 80 / font size lookup",
+      "accessed_at": "2026-09-20",
+      "scope": "APCA 感知对比度算法（W3C Note，未取代 WCAG 2.x 合规底线）"
+    },
+    {
+      "id": "S7",
+      "url": "https://refactoringui.com/",
+      "locator": "8pt grid, three-tone grayscale, semantic color buckets",
+      "accessed_at": "2026-09-20",
+      "scope": "Refactoring UI 工程化界面设计方法（8pt 网格、灰阶三级、语义化色板）"
+    },
+    {
+      "id": "S8",
+      "url": "https://webaim.org/resources/contrastchecker/",
+      "locator": "Contrast Checker — WCAG 2.2 AA / AAA",
+      "accessed_at": "2026-09-20",
+      "scope": "WebAIM 对比度在线校验工具"
+    },
+    {
+      "id": "S9",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme",
+      "locator": "prefers-color-scheme — light / dark / no-preference",
+      "accessed_at": "2026-09-20",
+      "scope": "用户系统级主题偏好的 CSS 媒体查询与 JS matchMedia 用法"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.smashingmagazine.com/2020/01/dark-mode-ux-design/",
+      "locator": "Designing For Dark Mode — toggle, persistence, FOUC",
+      "accessed_at": "2026-09-20",
+      "scope": "Smashing Magazine 暗色模式 UX 实践（持久化、闪烁预防、产品类型决策）"
+    },
+    {
+      "id": "S11",
+      "url": "https://tailwindcss.com/docs/dark-mode",
+      "locator": "Dark Mode — class strategy / media strategy",
+      "accessed_at": "2026-09-20",
+      "scope": "Tailwind CSS 暗色模式两种策略与 dark: 变体用法"
+    },
+    {
+      "id": "S12",
+      "url": "https://www.w3.org/TR/clreq/",
+      "locator": "中文排版需求 — 行高 1.5–1.8，标点挤压，字距",
+      "accessed_at": "2026-09-20",
+      "scope": "W3C 中文排版规范与中西文混排规则"
+    },
+    {
+      "id": "S13",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family",
+      "locator": "font-family — generic families, fallback chain",
+      "accessed_at": "2026-09-20",
+      "scope": "MDN font-family 属性与字体回退栈工程实现"
+    },
+    {
+      "id": "S14",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+      "locator": "Typography — Dynamic Type, San Francisco, line height",
+      "accessed_at": "2026-09-20",
+      "scope": "Apple HIG 字体排印与动态字号"
+    },
+    {
+      "id": "S15",
+      "url": "https://m3.material.io/styles/typography/",
+      "locator": "Type scale — display / headline / title / body / label",
+      "accessed_at": "2026-09-20",
+      "scope": "Material Design 3 Type Scale 与字阶 token"
+    },
+    {
+      "id": "S16",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout",
+      "locator": "CSS Grid Layout — grid-template-columns / grid-template-areas",
+      "accessed_at": "2026-09-20",
+      "scope": "MDN CSS Grid 完整工程语法与示例"
+    },
+    {
+      "id": "S17",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout",
+      "locator": "Flexbox — flex-direction / flex-wrap / justify / align",
+      "accessed_at": "2026-09-20",
+      "scope": "MDN Flexbox 完整工程语法与典型布局场景"
+    },
+    {
+      "id": "S18",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries",
+      "locator": "@container — container-type / container-name / container-query",
+      "accessed_at": "2026-09-20",
+      "scope": "MDN Container Queries 组件级响应式"
+    },
+    {
+      "id": "S19",
+      "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+      "locator": "F-pattern — eye-tracking study of 232 users",
+      "accessed_at": "2026-09-20",
+      "scope": "NN/g F-pattern 阅读模式原始研究（2006，232 用户眼动）"
+    },
+    {
+      "id": "S20",
+      "url": "https://www.nngroup.com/articles/z-pattern-reading/",
+      "locator": "Z-pattern — landing pages vs. content pages",
+      "accessed_at": "2026-09-20",
+      "scope": "NN/g Z-pattern 适用边界与近年质疑"
+    },
+    {
+      "id": "S21",
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "locator": "Nielsen's 10 Usability Heuristics (1994, updated 2020)",
+      "accessed_at": "2026-09-20",
+      "scope": "Nielsen 10 大可用性启发式（1994 提出，2020 措辞更新）"
+    },
+    {
+      "id": "S22",
+      "url": "https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/",
+      "locator": "Heuristic evaluation procedure — severity rating",
+      "accessed_at": "2026-09-20",
+      "scope": "NN/g 启发式评估流程与严重度评级"
+    },
+    {
+      "id": "S23",
+      "url": "https://tr.designtokens.org/format/",
+      "locator": "DTCG Format — $type / $value / group / aliases",
+      "accessed_at": "2026-09-20",
+      "scope": "W3C Design Tokens Community Group JSON Token 格式规范"
+    },
+    {
+      "id": "S24",
+      "url": "https://storybook.js.org/docs/writing-docs/autodocs",
+      "locator": "Autodocs — component documentation from JSDoc/TSDoc",
+      "accessed_at": "2026-09-20",
+      "scope": "Storybook 8.x Autodocs 自动文档生成与 controls 交互"
+    }
+  ],
+  "cases": [
+    {
+      "id": "case-color-token",
+      "owner": "learn-design",
+      "title": "色彩 Token 与 OKLCH 色板工程",
+      "kind": "design-system",
+      "task": "为虚构 SaaS 产品构建 OKLCH 语义色板（primary/secondary/neutral/success/warning/error/info），输出浅色与暗色双模式并通过 WCAG AA",
+      "constraints": [
+        "不得使用 filter: invert() 一键反色",
+        "全部色值必须用 OKLCH 表达",
+        "正文对比度 ≥ 4.5:1，大文本 ≥ 3:1，非文本组件 ≥ 3:1"
+      ],
+      "deliverables": [
+        "Tailwind config（含 gray-50 → gray-900 中性阶）",
+        "CSS Variables 三层架构（global → semantic → component）",
+        "暗色模式 OKLCH 映射表",
+        "WebAIM Contrast Checker 截图证据"
+      ],
+      "acceptance": [
+        "所有正文 Token 通过 4.5:1",
+        "暗色模式逐 Token 重新映射，无反相",
+        "在 DevTools 中对真实组件做对比度审计并修复不达标项"
+      ],
+      "environment": "现代浏览器（Chrome 111+ / Safari 15.4+ / Firefox 113+），Node.js 18+",
+      "entry": "docs/chapters/01-color.md",
+      "transfer": "为不同品牌色相（暖橙、电光紫）重做映射，验证跨色相的可访问性",
+      "delayed_check": "另选一天以新色相独立重做映射，记录对感知亮度差的判断准确率",
+      "capability_refs": ["color-theory", "design-tokens"],
+      "source_refs": ["S1", "S2", "S3", "S4", "S7", "S8"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-typography-scale",
+      "owner": "learn-design",
+      "title": "Type Scale 与中西文混排",
+      "kind": "design-system",
+      "task": "按 Perfect Fourth (1.333) 模数生成 5 档 Type Scale，输出中英文混排字体栈并验证正文 line-height 与 CPL",
+      "constraints": [
+        "中文字体声明遵循 clreq",
+        "行高：中文 1.5–1.8，英文 1.4–1.6",
+        "正文最大宽度 CPL 60–75 字符"
+      ],
+      "deliverables": [
+        "Type Scale token（5 档字号、字重、行高）",
+        "中英文字体分层 font-family 栈",
+        "letter-spacing 与 word-break 中西文规则"
+      ],
+      "acceptance": [
+        "5 档字重实际可见差异明显",
+        "中英文混排不出现标点挤压",
+        "正文字号在 DevTools 中实测行高符合 clreq 区间"
+      ],
+      "environment": "现代浏览器；Chrome DevTools",
+      "entry": "docs/chapters/02-typography.md",
+      "transfer": "为长文阅读类应用（电子书）改用 Major Third 模数并验证阅读密度",
+      "delayed_check": "另选一天将字体栈中的英文降级到系统字体，验证回退顺序是否仍然清晰",
+      "capability_refs": ["typography"],
+      "source_refs": ["S12", "S13", "S14", "S15"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-grid-system",
+      "owner": "learn-design",
+      "title": "12 栏网格与 SaaS 三栏布局",
+      "kind": "design-system",
+      "task": "用 8pt 模数设计 12 栏网格，输出断点表（320/768/1024/1280/1536），用 CSS Grid 实现 SaaS 三栏布局（侧栏 + 主内容 + 详情）",
+      "constraints": [
+        "所有 padding / margin 必须为 4 或 8 的倍数",
+        "断点必须覆盖移动端、平板、桌面、宽屏四档",
+        "Grid 区域与组件 flex 内部布局分层使用"
+      ],
+      "deliverables": [
+        "12 栏网格规范（gutter、margin、最大宽度）",
+        "CSS Grid 三栏布局实现",
+        "Tailwind / CSS 媒体查询断点表",
+        "Container Queries 组件级响应式案例"
+      ],
+      "acceptance": [
+        "切换所有断点布局不破版",
+        "在每个断点用 DevTools 量取 padding / margin 均落在 4/8 倍数",
+        "Container Queries 案例不依赖视口宽度"
+      ],
+      "environment": "现代浏览器；Chrome DevTools 设备模式",
+      "entry": "docs/chapters/03-grid-layout.md",
+      "transfer": "为移动端应用改造为单手拇指可达性优先的底部导航布局",
+      "delayed_check": "另选一天在真实设备（手机、平板）上验证断点切换无横向滚动条",
+      "capability_refs": ["grid-layout"],
+      "source_refs": ["S16", "S17", "S18"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-visual-hierarchy",
+      "owner": "learn-design",
+      "title": "视觉层次与 CTA 焦点引导",
+      "kind": "interface",
+      "task": "为一个落地页设计三级文字层级（Primary / Secondary / Tertiary），计算三个候选 CTA 的视觉重量并选出最优",
+      "constraints": [
+        "四要素（大小/颜色/粗细/空间）必须独立或叠加贡献层级",
+        "CTA 必须能从首屏 5 米外被识别",
+        "信息密度与留白取舍按落地页类型（单一价值主张）优先"
+      ],
+      "deliverables": [
+        "三级文字层级的字号、字重、灰度、行距组合表",
+        "视觉重量评估表（三个 CTA 候选对比）",
+        "F-pattern / Z-pattern 阅读路径标注"
+      ],
+      "acceptance": [
+        "三层级差异肉眼可辨且不互相冲突",
+        "CTA 视觉重量明显高于其他元素",
+        "在 DevTools 中实测正文字号、行高符合 Type Scale"
+      ],
+      "environment": "现代浏览器；Figma / 静态 HTML",
+      "entry": "docs/chapters/04-hierarchy.md",
+      "transfer": "为长文阅读类页面（博客）改用 Gutenberg 模式重新分配层级",
+      "delayed_check": "另选一天用 5 秒测试法验证首屏 CTA 是否被用户优先关注",
+      "capability_refs": ["visual-hierarchy", "visual-perception"],
+      "source_refs": ["S19", "S20", "S7"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-design-system",
+      "owner": "learn-design",
+      "title": "设计系统三层架构与 DTCG 输出",
+      "kind": "design-system",
+      "task": "构建 Token / Pattern / Component 三层，输出一份符合 W3C DTCG 规范的 JSON Token，并用 Storybook 文档化 Button / Input / Card 三组件",
+      "constraints": [
+        "JSON 必须使用 $type / $value 字段",
+        "三层 Token 严格分层：global → alias → component",
+        "组件必须含 5 态（default/hover/active/focus-visible/disabled）"
+      ],
+      "deliverables": [
+        "DTCG 规范 JSON Token 文件",
+        "Storybook 8.x 文档站点（autodocs + controls + a11y addon）",
+        "组件状态矩阵审查报告",
+        "符合 SemVer 的 CHANGELOG.md"
+      ],
+      "acceptance": [
+        "JSON 通过 DTCG JSON Schema 校验",
+        "三层 Token 任意一层修改可被下游追溯",
+        "Storybook 中每个组件 autodocs 与 controls 完整"
+      ],
+      "environment": "Node.js 18+；Storybook 8.x；Style Dictionary 可选",
+      "entry": "docs/chapters/05-design-system.md",
+      "transfer": "为多品牌产品（白标 SaaS）拆分多套 component token 共享 global",
+      "delayed_check": "另选一天为新增色相（暖橙）扩展 global token 并验证下游是否自动生效",
+      "capability_refs": ["design-system", "design-tokens", "component-library"],
+      "source_refs": ["S23", "S24", "S7"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-accessibility",
+      "owner": "learn-design",
+      "title": "WCAG 2.2 AA 无障碍审计与修复",
+      "kind": "audit",
+      "task": "对一个真实表单 + 模态对话框实现完整无障碍：label 关联、required、aria-describedby 错误信息、键盘导航、focus trap、Esc 关闭、关闭后焦点回到触发按钮",
+      "constraints": [
+        "必须满足 WCAG 2.2 AA 所有硬指标（4.5:1、24×24px、焦点可见）",
+        "键盘可达性 100%（无鼠标可走通所有流程）",
+        "装饰图片与信息图片 alt 处理正确"
+      ],
+      "deliverables": [
+        "WCAG 2.2 AA 自查清单（含 2.2 新增 2.4.11 / 2.5.7 / 2.5.8）",
+        "axe DevTools 审计报告 + 修复对照",
+        "键盘走查视频或截图证据"
+      ],
+      "acceptance": [
+        "axe-core 0 violations 命中",
+        "Tab 顺序符合视觉顺序",
+        "模态对话框 focus trap 正确实现并支持 Esc 关闭"
+      ],
+      "environment": "现代浏览器；axe DevTools / NVDA / VoiceOver",
+      "entry": "docs/chapters/06-accessibility.md",
+      "transfer": "为视频内容增加 closed captions 与 transcript 并通过 WCAG 1.2.x 审计",
+      "delayed_check": "另选一天用真实屏幕阅读器（NVDA）走一遍表单并记录提示依赖",
+      "capability_refs": ["accessibility-wcag"],
+      "source_refs": ["S1", "S8"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-dark-mode",
+      "owner": "learn-design",
+      "title": "暗色模式与 OKLCH 映射",
+      "kind": "interface",
+      "task": "为现有 SaaS 控制台加暗色模式：系统跟随 + 手动切换 + localStorage 持久化，所有正文对比度 ≥ 4.5:1",
+      "constraints": [
+        "不得使用 filter: invert() 一键反色",
+        "必须在 <head> 内联防 FOUC 脚本",
+        "所有暗色 Token 在 OKLCH 空间逐 Token 重新映射"
+      ],
+      "deliverables": [
+        "OKLCH 暗色 Token 映射表",
+        "三态切换控件（系统跟随 / 浅色 / 深色）",
+        "防闪烁同步脚本",
+        "WebAIM Contrast Checker 截图证据"
+      ],
+      "acceptance": [
+        "正文 ≥ 4.5:1、大文本 ≥ 3:1",
+        "切换主题无白闪（FOUC）",
+        "主色降饱和提亮度避免荧光感"
+      ],
+      "environment": "现代浏览器；CSS Variables + Tailwind dark: 可选",
+      "entry": "docs/chapters/07-dark-mode.md",
+      "transfer": "为高对比度场景（户外屏幕、视障用户）增加 high-contrast 模式并验证对比度 ≥ 7:1",
+      "delayed_check": "另选一天在 OLED 真机上验证纯黑底是否出现拖影",
+      "capability_refs": ["dark-mode", "color-theory"],
+      "source_refs": ["S1", "S2", "S4", "S5", "S9", "S10", "S11", "S8"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-design-review",
+      "owner": "learn-design",
+      "title": "SaaS 落地页评审与 10 条缺陷清单",
+      "kind": "audit",
+      "task": "对一个真实 SaaS 落地页完成 Stakeholder / Peer / Heuristic 三种评审，按 WCAG 2.2 AA + Nielsen 10 启发式 + 8 类视觉缺陷模式产出至少 10 条结构化缺陷清单",
+      "constraints": [
+        "每条缺陷必须附截图 + 描述 + 严重度 + 修复建议 + 验收标准",
+        "不得用主观感受替代硬数字对比度审计",
+        "评审报告必须区分硬红线、启发式违反、风格优化"
+      ],
+      "deliverables": [
+        "评审报告 Markdown（含至少 10 条缺陷）",
+        "WebAIM Contrast Checker 截图证据",
+        "评审转任务的 GitHub Issues 列表",
+        "style-refactor 流程闭环记录"
+      ],
+      "acceptance": [
+        "10 条缺陷全部带 P0/P1/P2 优先级与修复建议",
+        "P0 硬红线 100% 闭环",
+        "评审产出已拆分为可执行的 GitHub Issues"
+      ],
+      "environment": "浏览器 + WebAIM Contrast Checker + axe DevTools",
+      "entry": "docs/chapters/08-design-review.md",
+      "transfer": "为移动端 App 重复评审流程，对照 HIG 触控目标 44×44pt 重新分级",
+      "delayed_check": "另选一天回访上一轮评审的 Issues 验证闭环率",
+      "capability_refs": ["design-review", "accessibility-wcag", "consistency", "visual-hierarchy"],
+      "source_refs": ["S1", "S21", "S22"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-capstone-saas-console",
+      "owner": "learn-design",
+      "title": "Capstone：SaaS 控制台端到端设计工程",
+      "kind": "capstone",
+      "task": "整合 color-theory + typography + grid-layout + visual-hierarchy + accessibility-wcag + dark-mode，为一个 SaaS 控制台交付：完整 OKLCH 浅色 + 暗色 Token、Type Scale、12 栏网格、WCAG 2.2 AA 合规、暗色模式系统跟随 + 手动切换",
+      "constraints": [
+        "所有 capability 必须可追溯到对应章节",
+        "暗色模式不得使用 filter: invert()",
+        "全部正文对比度 ≥ 4.5:1（明色与暗色）",
+        "键盘可达性 100%"
+      ],
+      "deliverables": [
+        "完整 OKLCH 三层 Token（global → semantic → component）",
+        "Type Scale + 中英文字体栈 + clreq 行高",
+        "12 栏响应式布局（4 断点）",
+        "WCAG 2.2 AA 自查 + axe 审计 0 violations",
+        "暗色模式 + 防闪烁脚本"
+      ],
+      "acceptance": [
+        "WebAIM 对比度全 Token 通过",
+        "axe-core 0 violations",
+        "断点切换无破版",
+        "暗色模式无 FOUC"
+      ],
+      "environment": "现代浏览器；Storybook 8.x 可选；axe DevTools",
+      "entry": "docs/chapters/07-dark-mode.md",
+      "transfer": "为面向视障用户的政府站点复制整套方案并验证 NVDA 可达性",
+      "delayed_check": "另选一天回归测试整套方案，记录提示依赖与对各能力章节的引用准确率",
+      "capability_refs": ["color-theory", "typography", "grid-layout", "visual-hierarchy", "accessibility-wcag", "dark-mode"],
+      "source_refs": ["S1", "S2", "S7", "S12", "S16", "S21"],
+      "provenance": "designed",
+      "verification": "manual"
+    },
+    {
+      "id": "case-capstone-design-system-audit",
+      "owner": "learn-design",
+      "title": "Capstone：设计系统跨项目审计与迁移",
+      "kind": "capstone",
+      "task": "整合 design-system + design-tokens + design-review + consistency，审计一个旧项目的设计系统合规性，输出迁移至 DTCG 三层架构的实施方案与组件库重构任务清单",
+      "constraints": [
+        "DTCG JSON 必须通过 schema 校验",
+        "所有组件必须含 5 态",
+        "迁移方案不得破坏现有产品视觉一致性"
+      ],
+      "deliverables": [
+        "现状审计报告（Token 一致性、组件状态完备性、对比度合规性）",
+        "DTCG 三层 Token 迁移方案",
+        "Style Dictionary 多平台同步配置",
+        "组件库重构任务清单（含 P0/P1/P2）"
+      ],
+      "acceptance": [
+        "审计覆盖所有交互组件",
+        "迁移后任意 global token 修改可同步至所有平台",
+        "迁移过程分阶段发布，每阶段不破坏现有产品"
+      ],
+      "environment": "Node.js 18+；Style Dictionary；Storybook 8.x",
+      "entry": "docs/chapters/08-design-review.md",
+      "transfer": "为多品牌白标 SaaS 拆分多套 component token 共享 global，验证主题切换",
+      "delayed_check": "另选一天回访迁移阶段的 Issues 验证闭环率与 token 同步准确率",
+      "capability_refs": ["design-system", "design-tokens", "design-review", "consistency"],
+      "source_refs": ["S7", "S21", "S22", "S23", "S24"],
+      "provenance": "designed",
+      "verification": "manual"
+    }
+  ],
+  "roles": [
+    {
+      "id": "frontend-engineer",
+      "title": "前端工程师",
+      "responsibility": "在工程约束下落地设计 Token、组件库与无障碍合规；不替代设计师做美学决策",
+      "task_refs": [
+        "case-color-token",
+        "case-typography-scale",
+        "case-grid-system",
+        "case-design-system",
+        "case-accessibility",
+        "case-dark-mode",
+        "case-capstone-saas-console"
+      ],
+      "requirements": [
+        {
+          "logic": "all",
+          "capability_refs": ["color-theory", "accessibility-wcag"],
+          "source_refs": ["S1", "S2", "S8"]
+        },
+        {
+          "logic": "any",
+          "capability_refs": ["design-tokens", "component-library"],
+          "source_refs": ["S7", "S23"]
+        }
+      ]
+    },
+    {
+      "id": "product-designer",
+      "title": "产品设计师",
+      "responsibility": "负责信息架构、视觉层次与品牌表达；产出可被前端工程师无歧义还原的设计规范",
+      "task_refs": [
+        "case-typography-scale",
+        "case-visual-hierarchy",
+        "case-design-system",
+        "case-design-review",
+        "case-capstone-design-system-audit"
+      ],
+      "requirements": [
+        {
+          "logic": "all",
+          "capability_refs": ["visual-hierarchy", "consistency", "design-system"],
+          "source_refs": ["S7", "S21", "S24"]
+        },
+        {
+          "logic": "any",
+          "capability_refs": ["typography", "information-architecture"],
+          "source_refs": ["S12", "S19"]
+        }
+      ]
+    },
+    {
+      "id": "design-reviewer",
+      "title": "设计评审人",
+      "responsibility": "对照 WCAG 2.2 AA 与 Nielsen 启发式执行结构化评审，输出可执行的修复任务清单并闭环至 style-refactor 流程",
+      "task_refs": [
+        "case-design-review",
+        "case-capstone-design-system-audit"
+      ],
+      "requirements": [
+        {
+          "logic": "all",
+          "capability_refs": ["design-review", "accessibility-wcag", "consistency"],
+          "source_refs": ["S1", "S21", "S22"]
+        },
+        {
+          "logic": "any",
+          "capability_refs": ["visual-perception", "visual-hierarchy"],
+          "source_refs": ["S19", "S20"]
+        }
+      ]
+    }
+  ]
+}
