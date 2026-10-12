@@ -291,7 +291,7 @@ module.exports = {
 | **主题切换零成本** | 暗色模式只需覆盖 Alias 层与 Component 层，Global 层不变 |
 | **品牌迭代低成本** | 换品牌色只需改 Global 层（如 `blue-600` 改为 `purple-600`），所有页面同步 |
 | **跨端一致性** | 同一份 DTCG JSON 编译为 iOS / Android / Web，色板永远一致 |
-| **可测试性** | Alias 与 Component Token 可在 CI 中校验对比度（详见 [01-color](../01-color)） |
+| **可测试性** | Alias 与 Component Token 可在 CI 中校验对比度（详见 [01-color](./01-color)） |
 
 ---
 
@@ -336,7 +336,7 @@ interface ButtonProps {
 
 ### 3. 组件状态矩阵
 
-每个交互组件都必须提供**完整状态矩阵**（详见 [01-color](../01-color) 与 [foundations/quickstart](../foundations/quickstart)）：
+每个交互组件都必须提供**完整状态矩阵**（详见 [01-color](./01-color) 与 [foundations/quickstart](../foundations/quickstart)）：
 
 | 状态 | 触发条件 | 视觉变化 | 必须可观察 |
 |---|---|---|---|
