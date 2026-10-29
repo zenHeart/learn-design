@@ -1,6 +1,6 @@
 ---
 title: 暗色模式：从用户偏好到 OKLCH 颜色映射
-description: 暗色模式的工程目标（OLED 省电、视觉舒适、品牌表达）、prefers-color-scheme 媒体查询与三种策略、OKLCH 颜色映射、阴影与图片适配、localStorage 持久化与 Tailwind dark: 落地。
+description: "暗色模式的工程目标（OLED 省电、视觉舒适、品牌表达）、prefers-color-scheme 媒体查询与三种策略、OKLCH 颜色映射、阴影与图片适配、localStorage 持久化与 Tailwind dark: 落地。"
 ---
 
 # 暗色模式：从用户偏好到 OKLCH 颜色映射

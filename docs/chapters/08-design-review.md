@@ -70,11 +70,11 @@ description: Stakeholder / Peer / Heuristic 三种评审类型、四步走查流
 - **业务目标**：该页面的核心 KPI（转化率、留存、付费率、错误率）？
 - **平台**：Web？iOS？Android？桌面？响应式断点范围？
 
-依据产品类型矩阵（落地页 / B2B SaaS / 移动 App / AI 对话）确定第一优先级约束。详见 [docs/patterns/product-patterns.md](../../patterns/product-patterns.md)。
+依据产品类型矩阵（落地页 / B2B SaaS / 移动 App / AI 对话）确定第一优先级约束。详见 [docs/patterns/product-patterns.md](../patterns/product-patterns.md)。
 
 ### 2. 第二步：走查清单
 
-按 [docs/workflows/design-review.md](../../workflows/design-review.md) 的四步闭环流执行：
+按 [docs/workflows/design-review.md](../workflows/design-review.md) 的四步闭环流执行：
 
 1. 定位产品形态与约束
 2. 致命可用性红线排查（WCAG AA）
@@ -137,7 +137,7 @@ description: Stakeholder / Peer / Heuristic 三种评审类型、四步走查流
 
 ## 四、Nielsen 启发式：6 个最常见误区
 
-完整 Nielsen 10 条见 [docs/principles/heuristics-wcag.md](../../principles/heuristics-wcag.md)。本节聚焦日常项目中最常被违反的 6 条，并提供具体走查问句。
+完整 Nielsen 10 条见 [docs/principles/heuristics-wcag.md](../principles/heuristics-wcag.md)。本节聚焦日常项目中最常被违反的 6 条，并提供具体走查问句。
 
 ### 1. 系统状态可见性
 
@@ -341,7 +341,7 @@ description: Stakeholder / Peer / Heuristic 三种评审类型、四步走查流
 
 选择一个真实 SaaS 产品落地页（公开网站即可），完成以下工作：
 
-1. 确认产品类型（落地页 / SaaS / 移动端），按 [docs/patterns/product-patterns.md](../../patterns/product-patterns.md) 锁定第一优先级约束。
+1. 确认产品类型（落地页 / SaaS / 移动端），按 [docs/patterns/product-patterns.md](../patterns/product-patterns.md) 锁定第一优先级约束。
 2. 按 WCAG 2.2 AA 排查硬红线，用 WebAIM Contrast Checker 逐条验证 [S5]。
 3. 按 Nielsen 10 启发式（重点 6 条）走查至少 1 个核心页面与 1 个关键交互（CTA、注册、定价）。
 4. 套用 8 类视觉缺陷模式清单，记录至少 **10 条具体缺陷**（截图 + 描述 + 严重度 + 修复建议 + 验收标准）。
