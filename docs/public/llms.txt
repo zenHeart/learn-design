@@ -9,6 +9,7 @@
 - [现代研发全景中的设计体系：UI/UX 定位、SOP 与聚焦边界](https://design.zenheart.site/overview/design-landscape)：研发全周期全景图、UI 与 UX 职责对比表、20 年 SOP 演进史（Photoshop → Sketch → Figma/Tokens）与本站三大聚焦战略
 
 ### 实战落地指南（Playbooks）
+- [学习 Agent 与知识库 Agent 的产品交互合同](https://design.zenheart.site/patterns/learning-agent-harness)：待实施的任务、证据、授权与验收合同，附 Pi/MCP/WCAG 固定来源及未核验范围
 - [场景 A：设计走查体检表](https://design.zenheart.site/workflows/design-review)：代码合入与上线前 10 分钟自查，WCAG 2.2 AA 硬红线 + Nielsen 启发式走查
 - [场景 B：风格选型与重构指南](https://design.zenheart.site/workflows/style-refactor)：主流设计系统选型决策树、DTCG 三层 Token 架构与四步重构实战
 - [场景 C：专业设计审视框架](https://design.zenheart.site/workflows/professional-critique)：Garrett 五层提问阶梯、四问心智模型与跨体系 7 条共性审查
@@ -43,3 +44,4 @@
 - 引用规则：事实性论断必须标注信源层级（L0 官方 / L2 行业 / L4 著作 / E 实证）与取用日期；厂商自测数据标“声称”
 - 已证伪教条（三次点击法则、“必须全放首屏”、7±2 菜单上限）在评审时主动降权驳回
 - 站点维护约定与扩展规则详见仓库根 AGENTS.md 与 README.md
+

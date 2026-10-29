@@ -60,7 +60,8 @@ export default defineConfig({
           { text: '场景 B：风格选型与重构指南 (Style Refactor)', link: '/workflows/style-refactor' },
           { text: '场景 C：专业设计审视框架 (Critique)', link: '/workflows/professional-critique' },
           { text: '场景 D：产品类型设计约束矩阵', link: '/patterns/product-patterns' },
-          { text: '场景 E：主流设计语言索引与借鉴', link: '/languages/design-languages' }
+          { text: '场景 E：学习 Agent 与知识库 Agent 合同', link: '/patterns/learning-agent-harness' },
+          { text: '场景 F：主流设计语言索引与借鉴', link: '/languages/design-languages' }
         ]
       },
       {
